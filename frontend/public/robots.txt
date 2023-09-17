@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Disallow: /
+Disallow: /profile
+Disallow: /profile/*
+Disallow: /myearning
+Disallow: /bounty
+Disallow: /notifications
+Disallow: /messages/*
+Disallow: /messages
+Disallow: /messages*
+Disallow: /mycollection
+Disallow: /setting
+Disallow: /help-center
+
