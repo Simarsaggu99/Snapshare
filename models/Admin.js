@@ -1,9 +1,10 @@
-const { Schema, model } = require("mongoose");
+
+const { Schema, model } = require("mongoose")
 
 const adminSchema = new Schema(
   {
-    //name: { type: String, required: true },
-    name: { type: String, trim: true },
+    name: { type: String ,
+             trim: true },
     email: {
       type: String,
       unique: true,
@@ -19,7 +20,7 @@ const adminSchema = new Schema(
   }
 );
 
-const User = model("Admin", adminSchema, "Admin");
+const User = model("Admin", adminSchema, "Admin")
 
 // make this available to our users in our Node applications
 module.exports = User;
