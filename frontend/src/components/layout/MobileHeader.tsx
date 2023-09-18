@@ -594,51 +594,13 @@ const MobileHeader = () => {
                       </div>
                     </Link>
                     <div>
-                      {/* {menuArray?.map((item: any) => (
-                        <div key={item?.id} className={`${item?.className} `}>
-                          {item?.id === 5 ? (
-                            <button
-                              onClick={async () => {
-                                window.location.replace("/");
-                                window.localStorage.clear();
-                                setTimeout(() => {
-                                  setCurrentUserData({});
-                                  setSearchInput("");
-                                  logoutUser();
-                                }, 500);
-                              }}
-                              className="my-2 flex w-full gap-3 rounded-md px-2 py-1.5 text-[#564C4C] hover:bg-[#EDEDED]"
-                            >
-                              <div className="rounded-full bg-gray-300 p-4">
-                                {item?.icon}
-                              </div>
-                              <p className="mt-3">{item?.name}</p>
-                            </button>
-                          ) : (
-                            <Link href={item?.link}>
-                              <button
-                                onClick={async () => {
-                                  setTimeout(() => {
-                                    setMenuPopUp(false);
-                                  }, 300);
-                                }}
-                                className="my-2 flex w-full gap-3 rounded-md px-2 py-1.5 text-[#564C4C] hover:bg-[#EDEDED]"
-                              >
-                                <div className="rounded-full bg-gray-300 p-4">
-                                  {item?.icon}
-                                </div>
-                                <p className="mt-3">{item?.name}</p>
-                              </button>
-                            </Link>
-                          )}
-                        </div>
-                      ))} */}
+
                     </div>
                   </div>
                 </Popover>
               </div>
             </div>
-            {/* </div> */}
+
           </div>
         </>
       ) : null}
