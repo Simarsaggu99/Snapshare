@@ -19,9 +19,11 @@ interface coverImageInterface {
 }
 
 interface coverImagePropsInterface {
+
   coverImageProps: coverImageInterface;
 }
 const CoverImage = ({
+  
   coverImageProps: {
     getSingleUser,
     coverImage,
