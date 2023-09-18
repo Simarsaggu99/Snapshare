@@ -17,9 +17,7 @@ const LoginModal = () => {
   return (
     <div>
       <div>
-        {/* {isModel && (
-          <div className="backdrop-blur-xs fixed top-0 left-0  z-40 h-screen  w-full overflow-hidden bg-black/60">
-            <div className="sticky left-0 right-0 top-[10%] mx-auto  mt-20 h-[80%] rounded-lg border border-black  bg-[#2D2525] sm:top-[29%]  sm:h-[48%] sm:w-[50%] md:w-[40%] lg:w-[30%] xl:w-[24%]"> */}
+
         <Modal
           isVisiable={isModel}
           onClose={setIsModel}
@@ -53,17 +51,12 @@ const LoginModal = () => {
             <div className="flex justify-center text-white text-2xl font-semibold">
               Snapshare
             </div>
-            {/* <div className="my-8 mt-3 flex justify-center">
-              Snapshare
-            </div> */}
+
             <div className="mx-6">
               <div className="border-3 mx-atuo my-5  rounded-md  border  text-lg text-white">
                 <button
                   className="flex w-full justify-center"
-                  // onClick={() => {
-                  //   // setUserModal(true);
-                  //   setGoogleLoginState(true);
-                  // }}
+
                   onClick={async (e) => {
                     e.preventDefault();
                     if (!router.query.userId) {
