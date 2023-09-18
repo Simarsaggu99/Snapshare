@@ -226,6 +226,7 @@ const Header = () => {
             <div className="fixed top-0 z-40 my-auto mb-5   grid w-[100%] grid-cols-2 items-center justify-between gap-4 bg-[#332d2b] py-1 sm:grid-cols-3 ">
               <div className="  block  h-[50px] w-[50px] cursor-pointer  justify-center sm:mx-10  md:ml-10  md:h-[57px] md:w-[57px]  lg:ml-[6.5rem] lg:hidden xl:ml-[8.7rem] 2xl:ml-[13rem]">
                 <button
+                
                   onClick={() => {
                     setSearchInput("");
                   }}
