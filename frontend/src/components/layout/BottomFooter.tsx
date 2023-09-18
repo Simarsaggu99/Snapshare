@@ -64,7 +64,6 @@ const BottomFooter = () => {
             }/10`}</p>
           </button>
         </div>
-        {/* <div className="flex w-[40%] justify-between rounded-tl-[30px] bg-[#332d2b] py-2 px-4"> */}
         <div>
           <Link href={`/messages?tab=All`}>
             <button className="relative rounded-full bg-[#564C4C] p-2.5 ">
