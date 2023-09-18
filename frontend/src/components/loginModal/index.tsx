@@ -9,8 +9,6 @@ import { useAtom } from "jotai";
 import { isLoginModal } from "@/store";
 import Modal from "../Modal";
 import { useRouter } from "next/router";
-import memesakeLogo from "~/images/logo_text.png";
-import smallLogo from "~/images/logo_icon.png";
 
 const LoginModal = () => {
   const router = useRouter();
@@ -59,7 +57,7 @@ const LoginModal = () => {
               Snapshare
             </div> */}
             <div className="mx-6">
-              <div className="border-3 mx-atuo my-5   rounded-md  border  text-lg text-white">
+              <div className="border-3 mx-atuo my-5  rounded-md  border  text-lg text-white">
                 <button
                   className="flex w-full justify-center"
                   // onClick={() => {
@@ -74,9 +72,6 @@ const LoginModal = () => {
                     await new Promise((resolve, reject) => {
                       resolve(
                         window.location.assign(`${hostname()}/api/auth/google`)
-                        // axios.get(
-                        // "https://api-test.memesake.managemyorg.com/api/auth/google"
-                        // )
                       );
                     }).then(() => {});
 
@@ -121,44 +116,10 @@ const LoginModal = () => {
                   }}
                 /> */}
               </div>
-
-              {/* <div className="my-2 flex justify-center rounded-md border  text-lg text-white">
-                <button
-                  className="flex items-center justify-center"
-                  // onClick={async (e) => {
-                  //   e.preventDefault();
-                  //   if (!router.query.userId) {
-                  //     window.localStorage.setItem("currentPath", router.asPath);
-                  //   }
-                  //   await new Promise((resolve, reject) => {
-                  //     resolve(
-                  //       window.location.assign(
-                  //         `${hostname()}/api/auth/facebook`
-                  //       )
-                  //       // axios.get(
-                  //       // "https://api-test.memesake.managemyorg.com/api/auth/google"
-                  //       // )
-                  //     );
-                  //   }).then(() => {});
-                  // }}
-                >
-                  <div className="mt-2 pr-4">
-                    <Image
-                      src={facebook}
-                      alt="facebook"
-                      width={25}
-                      height={23}
-                    />
-                  </div>
-                  <p className="text-base font-medium">
-                    Continue with Facebook
-                  </p>
-                </button>
-              </div> */}
             </div>
             <div className="mt-7 px-8  text-xs text-white">
               <p>
-                By continuing you indicate that you agree to Memesake&apos;s{" "}
+                By continuing you indicate that you agree to Snapshare&apos;s{" "}
                 <span
                   onClick={() => {
                     router.push("/help-center?tab=terms_and_conditions");
