@@ -96,8 +96,7 @@ const BottomFooter = () => {
               </div>
             )}
           </Link>
-          {/* <Link href={`/profile/${currentUser?.data?._id}`}></Link> */}
-          {/* </div> */}
+          
         </div>
       </div>
       <AddPost postProps={addPostProps} />
