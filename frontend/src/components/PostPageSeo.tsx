@@ -7,8 +7,7 @@ const defaultMeta = {
   siteName: "Snapshare",
   description:
     "Heaven for memers. Earn money by publishing your memes. Find the most hilarious memes on the internet. See you there!",
-  // "The best platform for meme lovers. Publish your memes and earn rewards in cash. Grow your audience and become popular for your memes. Find the best memes on internet. Join the heaven of memers right f'n now!",
-  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
+    
   type: "website",
   robots: "follow, index",
  
