@@ -68,9 +68,7 @@ const LoginModal = () => {
                       );
                     }).then(() => {});
 
-                    // setIsModel(false);
 
-                    // googleLogin();
                   }}
                 >
                   <div className="mt-2 flex   pr-4 ">
@@ -88,26 +86,7 @@ const LoginModal = () => {
                   </div>
                 </button>
 
-                {/* <GoogleLogin
-                  onSuccess={async (credentialResponse) => {
-                    axios
-                      .get(`${hostname()}/api/auth/google`)
-                      .then((res) => {
-                        console.log("res", res);
-                      })
-                      .catch((err) => {
-                        console.log("errrrrrrrrrrrrrrr", err);
-                      });
-                    // router.push(
-                    //   `/auth-verify?token=${credentialResponse?.credential}`
-                    // );
-                    console.log(credentialResponse);
-                    // await axios.get(`${hostname()}/api/auth/google`);
-                  }}
-                  onError={() => {
-                    console.log("Login Failed");
-                  }}
-                /> */}
+
               </div>
             </div>
             <div className="mt-7 px-8  text-xs text-white">
@@ -135,10 +114,7 @@ const LoginModal = () => {
               </p>
             </div>
           </div>
-          {/*
-            </div>
-          </div>
-        )} */}
+
         </Modal>
       </div>
     </div>
