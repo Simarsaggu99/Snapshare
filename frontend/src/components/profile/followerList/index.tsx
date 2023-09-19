@@ -45,9 +45,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
   const dataFetchedRef = useRef(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  // const usersFollowers: any = useGetUserFollower({
-  //   pathParams: { userId },
-  // });
+  
   const removeFollower = useRemoveFollower();
   console.log(isLoading, "this is good");
   useEffect(() => {
@@ -75,6 +73,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
           setIsLoading(false);
         }
       });
+
     }
 
     return () => {
@@ -82,6 +81,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
       setFollowerList([]);
       dataFetchedRef.current = false;
     };
+
   }, [userId]);
 
   const getFollower = () => {
@@ -103,6 +103,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
         setTotalFollowerCount(res?.data?.total);
       }
     });
+
   };
   const removeFollwer = (id: any) => {
     setFollowerList(followerList?.filter((fil: any) => fil?._id !== id));
@@ -140,7 +141,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
               id="scrollableDiv"
               style={{
                 overflow: "auto",
-                // minHeight: "300px",
+               
                 height: "450px",
                 background: "white",
                 borderRadius: "10px",
@@ -165,7 +166,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
                     <p>Loading...</p>
                   </h4>
                 }
-                // inverse={true}
+                
                 scrollableTarget="scrollableDiv"
               >
                 {followerList?.map((item: any) => (
@@ -250,6 +251,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
                                               "OPPS someting went wrong. while unfollow user ",
                                           });
                                         });
+
                                     }}
                                   >
                                     <div className="flex items-center justify-center px-3">
@@ -272,6 +274,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
                                           : { ...val };
                                       })
                                     );
+
                                     followUser
                                       .mutateAsync({
                                         pathParams: { userId: item?._id },
@@ -285,6 +288,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
                                             "OPPS someting went wrong. while follow user ",
                                         });
                                       });
+
                                   }}
                                 >
                                   <div className="flex w-full items-center justify-center ">
@@ -314,5 +318,6 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
     </div>
   );
 };
+
 
 export default FollowerList;

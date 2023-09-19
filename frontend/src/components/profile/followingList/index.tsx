@@ -30,7 +30,7 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
   const [startIndex, setStartIndex] = useState(0);
   const [followingListDetails, setFollowingListDetails] = useState<any[]>([]);
   const [totalFollowingCount, setTotalFollowingCount] = useState<any>();
-  // This state used for hold id to show loading on particular button
+  
   const [isLoadingId, setIsLoadingId] = useState<string[]>([]);
   const [fetchFollowerLoading, setFetchFollowerLoading] = useState(false);
   const viewSize = 10;
@@ -42,9 +42,9 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
   useEffect(() => {
     console.log("hiii");
 
-    // if (dataFetchedRef.current) return;
+    
     setFetchFollowerLoading(true);
-    // dataFetchedRef.current = true;
+    
 
     if (userId) {
       getFollowingList({
@@ -70,6 +70,7 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
         setTotalFollowingCount(res?.data?.total);
         setFetchFollowerLoading(false);
       });
+
     }
 
     return () => {
@@ -119,7 +120,7 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
               id="scrollableDiv"
               style={{
                 overflow: "auto",
-                // minHeight: "360px",
+               
                 height: "430px",
                 background: "white",
                 borderRadius: "10px",
@@ -190,45 +191,14 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
                                       : { ...val };
                                   })
                                 );
-                                // setIsLoadingId([...isLoadingId, item?._id]);
-                                // if (
-                                //   !(
-                                //     unfollowUser.isLoading &&
-                                //     isLoadingId.includes(item?._id)
-                                //   )
-                                // ) {
+                                
                                 unfollowUser
                                   .mutateAsync({
                                     pathParams: { userId: item?._id },
                                   })
                                   .then((res) => {
                                     getSingleUser.refetch();
-                                    // usersFollowingList.refetch();
-                                    // setFollowingListDetails(
-                                    //   followingListDetails?.map((val) => {
-                                    //     return val?._id === item?._id
-                                    //       ? {
-                                    //           ...val,
-                                    //           is_following: false,
-                                    //         }
-                                    //       : { ...val };
-                                    //   })
-                                    // );
-                                    // setFollowingListDetails(
-                                    //   followingListDetails?.filter(
-                                    //     (val) => val?._id !== item?._id
-                                    //   )
-                                    // );
-                                    // setFollowingListDetails(
-                                    //   followingListDetails?.map((val) => {
-                                    //     return val?._id === item?._id
-                                    //       ? {
-                                    //           ...val,
-                                    //           is_following: false,
-                                    //         }
-                                    //       : { ...val };
-                                    //   })
-                                    // );
+                                    
                                   })
                                   .catch((er) => {
                                     notifyError({
@@ -268,7 +238,7 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
                                       : { ...val };
                                   })
                                 );
-                                // if (!followUser.isLoading) {
+                                
                                 followUser
                                   .mutateAsync({
                                     pathParams: { userId: item?._id },
@@ -276,16 +246,7 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
                                   .then((res) => {
                                     getSingleUser.refetch();
 
-                                    // setFollowingListDetails(
-                                    //   followingListDetails?.map((val) => {
-                                    //     return val?._id === item?._id
-                                    //       ? {
-                                    //           ...val,
-                                    //           is_following: true,
-                                    //         }
-                                    //       : { ...val };
-                                    //   })
-                                    // );
+                                   
                                   })
                                   .catch((err) => {
                                     notifyError({
@@ -293,7 +254,7 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
                                         "OPPS someting went wrong. while follow user!",
                                     });
                                   });
-                                // }
+                                
                               }}
                             >
                               {/* {followUser.isLoading &&
@@ -326,5 +287,6 @@ const FollowingList = ({ getSingleUser }: FollowerProps) => {
     </div>
   );
 };
+
 
 export default FollowingList;

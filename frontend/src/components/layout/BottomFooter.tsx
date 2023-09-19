@@ -23,7 +23,7 @@ const BottomFooter = () => {
   return (
     <div className="fixed bottom-0 z-10 block w-full rounded-t-md  shadow-md lg:hidden ">
       <div className="flex w-[100%] justify-between gap-1 rounded-t-3xl bg-[#2D2525] py-2 px-1">
-        {/* <div className="flex w-[40%] justify-between rounded-tr-[30px] bg-[#332d2b] py-2 px-4"> */}
+        
         <div>
           <Link href={`/`}>
             <button className="rounded-full bg-[#564C4C]  p-2.5">
@@ -44,14 +44,7 @@ const BottomFooter = () => {
           </Link>
         </div>
         <div className="">
-          {/* <button
-            onClick={() => {
-              setIsAddPost(true);
-            }}
-            className="rounded-full bg-[#564C4C] p-2.5 pl-3 pt-3"
-          >
-            <CreatePost />
-          </button> */}
+          
           <button
             onClick={() => {
               if (checkTodayPostCount?.data?.postCount === 0) {
@@ -71,7 +64,6 @@ const BottomFooter = () => {
             }/10`}</p>
           </button>
         </div>
-        {/* <div className="flex w-[40%] justify-between rounded-tl-[30px] bg-[#332d2b] py-2 px-4"> */}
         <div>
           <Link href={`/messages?tab=All`}>
             <button className="relative rounded-full bg-[#564C4C] p-2.5 ">
@@ -104,8 +96,7 @@ const BottomFooter = () => {
               </div>
             )}
           </Link>
-          {/* <Link href={`/profile/${currentUser?.data?._id}`}></Link> */}
-          {/* </div> */}
+          
         </div>
       </div>
       <AddPost postProps={addPostProps} />

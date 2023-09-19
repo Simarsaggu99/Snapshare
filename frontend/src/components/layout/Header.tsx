@@ -95,21 +95,17 @@ const Header = () => {
         ) {
           window.localStorage.clear();
           setCurrentUserData({});
-          // router.push("/");
+
           window.location.replace("/");
           setSearchInput("");
         }
       });
-    // setIsSearchOpen(false);
-    // .catch((err) => {
-    //   console.log("err", err);
-    //   router.push("/");
-    // });
+ 
     return () => {
       setMenuPopUp(false);
     };
   }, []);
-  // This code use for hide scroll bar on open modal and pop up
+
   useEffect(() => {
     if (isMessagePopUp || open.notify || isAddPost) {
       document.body.style.overflow = "hidden";
@@ -155,8 +151,7 @@ const Header = () => {
 
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
-      // then close the menu
+
       if (
         open &&
         reportCardRef.current &&
@@ -164,7 +159,7 @@ const Header = () => {
         !reportModalRef?.current?.contains(e.target)
       ) {
         setOpen({ notify: false });
-        // setIsActive(false)
+
       }
     };
     document.addEventListener("mousedown", checkIfClickedOutside);
@@ -179,8 +174,7 @@ const Header = () => {
   const logoutUser = async () => {
     await logOutUser().then(() => {
       setCurrentUser();
-      // location.reload();
-      // router.push("/");
+
     });
   };
 
@@ -213,8 +207,7 @@ const Header = () => {
     if (!isActive) {
       event.preventDefault();
     } else if (isActive && !event.target.closest(".input-holder")) {
-      // setIsActive(false);
-      // clear input
+
       container.querySelector(".search-input").value = "";
     }
     setIsActive(!isActive);
@@ -222,11 +215,7 @@ const Header = () => {
 
   const handleKey = (event: { key: string }) => {
     if (event.key === "Enter") {
-      // if (searchInput) {
-      //   router.push(`/search?tab=all&&search_query=${searchInput}`);
-      // } else {
-      //   router.push("/");
-      // }
+
     }
   };
   return (
@@ -237,6 +226,7 @@ const Header = () => {
             <div className="fixed top-0 z-40 my-auto mb-5   grid w-[100%] grid-cols-2 items-center justify-between gap-4 bg-[#332d2b] py-1 sm:grid-cols-3 ">
               <div className="  block  h-[50px] w-[50px] cursor-pointer  justify-center sm:mx-10  md:ml-10  md:h-[57px] md:w-[57px]  lg:ml-[6.5rem] lg:hidden xl:ml-[8.7rem] 2xl:ml-[13rem]">
                 <button
+                
                   onClick={() => {
                     setSearchInput("");
                   }}
@@ -273,24 +263,12 @@ const Header = () => {
                     onKeyDown={handleKey}
                     onChange={(e) => {
                       setSearchInput(e.target.value);
-                      // if (e.target.value) {
-                      //   router.push(
-                      //     `/search?tab=all&&search_query=${e.target.value}`
-                      //   );
-                      // } else {
-                      //   router.push("/");
-                      // }
+
                     }}
                   />
                   <button
                     onClick={() => {
-                      // if (searchInput) {
-                      //   router.push(
-                      //     `/search?tab=all&&search_query=${searchInput}`
-                      //   );
-                      // } else {
-                      //   router.push("/");
-                      // }
+
                     }}
                     className=" absolute right-4 top-1.5 text-xl text-[#FF5E34] "
                   >
@@ -358,12 +336,7 @@ const Header = () => {
                 <div>
                   <button
                     onClick={() => {
-                      // if (checkTodayPostCount?.data?.postCount === 0) {
-                      //   return notifyError({
-                      //     message: "You already posted 10 posts!",
-                      //   });
-                      // }
-                      // setIsAddPost(true);
+
                     }}
                     className="relative   flex gap-3 rounded-full bg-primary-600 py-1 pl-1 pr-3 sm:pl-1 sm:pr-5  "
                   >
@@ -380,7 +353,7 @@ const Header = () => {
                     <button
                       className="mx-2 rounded-full bg-[#564C4C] px-3  py-3    "
                       onClick={() => {
-                        // changeOpen("notify");
+
                       }}
                     >
                       <NotificationIcon />
@@ -402,7 +375,7 @@ const Header = () => {
                   <button
                     ref={messageRef}
                     onClick={() => {
-                      // setIsMessagePopUp(!isMessagePopUp);
+
                     }}
                     className={`relative mx-2  rounded-full bg-[#564C4C] px-3  py-3    `}
                   >
@@ -436,15 +409,14 @@ const Header = () => {
                     onClick={() => {
                       setMenuPopUp(!menuPopUp);
                     }}
-                    // className="relative  mx-4 rounded-full sm:mx-10 md:mx-0 lg:h-[46px] lg:w-[46px]"/
+
                     className={` mx-0 cursor-pointer    lg:mx-0 `}
                   >
                     {currentUserData?.avatar_url ? (
                       <div className="relative h-[45px] w-[45px] pt-2">
                         <Image
                           src={currentUserData?.avatar_url}
-                          // height={45}
-                          // width={45}
+
                           layout="fill"
                           className="shadow-md "
                           style={{ borderRadius: "50%" }}
@@ -601,13 +573,7 @@ const Header = () => {
                   onKeyDown={handleKey}
                   onChange={(e) => {
                     setSearchInput(e.target.value);
-                    // if (e.target.value) {
-                    //   router.push(
-                    //     `/search?tab=all&&search_query=${e.target.value}`
-                    //   );
-                    // } else {
-                    //   router.push("/");
-                    // }
+
                   }}
                 />
                 <button

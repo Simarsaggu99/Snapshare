@@ -23,7 +23,7 @@ interface coverImagePropsInterface {
   coverImageProps: coverImageInterface;
 }
 const CoverImage = ({
-  
+
   coverImageProps: {
     getSingleUser,
     coverImage,
@@ -87,12 +87,12 @@ const CoverImage = ({
           (blobFile) =>
             new File([blobFile], coverImage?.name, { type: "image/png" })
         );
-      // setUploadData(undefined);
+      
       const newFile = await onUploadCover(file);
 
       return newFile;
     } catch (e) {
-      // notifyError({ message: "opps something went wrong" });
+      
     }
   }, [croppedAreaPixels]);
   return (
@@ -104,7 +104,7 @@ const CoverImage = ({
           {upImg ? (
             <div
               className="h-full w-full"
-              // className="relative top-0 h-[106px] w-[100%] md:mx-auto md:h-[222px]   md:w-[90%] xl:h-[400px]"
+              
             >
               <div className="cover-crop-container  h-full">
                 <Cropper
@@ -159,7 +159,7 @@ const CoverImage = ({
                       userRef={editCoverRef}
                       isVisible={isEditCoverPhoto}
                       onclose={setIsEditCoverPhoto}
-                      // className="right-2 top-[7.5rem]  hidden  md:block lg:top-[7.5rem]  xl:top-[15.9rem]"
+                     
                     >
                       <div className="p-4 text-lg">
                         <label htmlFor="cover_img">
@@ -197,7 +197,7 @@ const CoverImage = ({
       ) : (
         <div
           className="h-full w-full"
-          // className="relative top-0 my-auto flex h-[126px]  w-[100%] justify-center bg-gray-200 md:mx-auto md:h-[244px] md:w-[90%] xl:h-[512px]"
+         
         >
           {/* this is a part where image is not update yet */}
           {upImg ? (
@@ -212,12 +212,13 @@ const CoverImage = ({
                   onCropComplete={onCropComplete}
                   onZoomChange={setZoom}
                 />
+
               </div>
             </div>
           ) : (
             <div
               className="flex h-full w-full justify-center"
-              // className="relative top-0 my-auto flex h-[116px]  w-[100%]  justify-center bg-gray-200  md:mx-auto md:h-[244px] md:w-[90%] xl:h-[512px]"
+              
             >
               <div className="relative flex  h-[90%] w-[70%] justify-center sm:w-[40%] md:w-[35%]">
               Snapshare
@@ -234,6 +235,7 @@ const CoverImage = ({
                     onClick={() => {
                       setUpImg("");
                     }}
+
                     className="cursor-pointer rounded-md  bg-white px-2 py-1 "
                   >
                     Cancel
@@ -305,5 +307,6 @@ const CoverImage = ({
     </div>
   );
 };
+
 
 export default CoverImage;

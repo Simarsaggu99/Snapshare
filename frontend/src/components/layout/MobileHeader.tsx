@@ -93,21 +93,17 @@ const MobileHeader = () => {
         ) {
           window.localStorage.clear();
           setCurrentUserData({});
-          // router.push("/");
+
           window.location.replace("/");
           setSearchInput("");
         }
       });
-    // setIsSearchOpen(false);
-    // .catch((err) => {
-    //   console.log("err", err);
-    //   router.push("/");
-    // });
+
     return () => {
       setMenuPopUp(false);
     };
   }, []);
-  // This code use for hide scroll bar on open modal and pop up
+
   useEffect(() => {
     if (isMessagePopUp || open.notify || isAddPost) {
       document.body.style.overflow = "hidden";
@@ -175,7 +171,7 @@ const MobileHeader = () => {
       name: "Log out",
       icon: <LogoutIcon />,
       id: 5,
-      // link: "/",
+
       className: "",
     },
   ];
@@ -188,9 +184,7 @@ const MobileHeader = () => {
 
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
-      // then close the menu
-      // setIsActive(false);
+
       if (
         open &&
         reportCardRef.current &&
@@ -209,8 +203,7 @@ const MobileHeader = () => {
   const logoutUser = async () => {
     await logOutUser().then(() => {
       setCurrentUser();
-      // location.reload();
-      // router.push("/");
+
     });
   };
 
@@ -315,8 +308,7 @@ const MobileHeader = () => {
                       <Image
                         src={smallLogo}
                         alt="Snapshare logo image"
-                        // height={45}
-                        // width={45}
+
                         objectFit="contain"
                         className=""
                       />
@@ -342,7 +334,7 @@ const MobileHeader = () => {
                 </button>
               </div>
 
-              {/* <div className=" relative mx-1 flex items-center justify-end md:mx-5 lg:mx-0 lg:justify-center 2xl:mr-28"> */}
+
               {showInput && (
                 <div className="relative block  ">
                   <div
@@ -447,12 +439,7 @@ const MobileHeader = () => {
                 <div>
                   <button
                     onClick={() => {
-                      // if (checkTodayPostCount?.data?.postCount === 0) {
-                      //   return notifyError({
-                      //     message: "You already posted 10 posts!",
-                      //   });
-                      // }
-                      // setIsAddPost(true);
+
                     }}
                     className="relative  flex items-center gap-3 rounded-full bg-primary-600 py-1 pl-1 pr-3 sm:pl-1 sm:pr-5  "
                   >
@@ -471,7 +458,7 @@ const MobileHeader = () => {
                     <button
                       className=" rounded-full bg-[#564C4C] px-2.5  py-2.5    "
                       onClick={() => {
-                        // router.push("/notifications");
+
                       }}
                     >
                       <NotificationIcon />
@@ -494,8 +481,7 @@ const MobileHeader = () => {
                   <button
                     ref={messageRef}
                     onClick={() => {
-                      // setIsMessagePopUp(!isMessagePopUp);
-                      // router.push("/messages?tab=All");
+
                     }}
                     className={`relative mx-2  rounded-full bg-[#564C4C] px-3  py-3    `}
                   >
@@ -525,15 +511,14 @@ const MobileHeader = () => {
                   onClick={() => {
                     setMenuPopUp(!menuPopUp);
                   }}
-                  // className="relative  mx-4 rounded-full sm:mx-10 md:mx-0 lg:h-[46px] lg:w-[46px]"/
+
                   className={` cursor-pointer    lg:mx-0 `}
                 >
                   {currentUserData?.avatar_url ? (
                     <div className="relative h-[42px] w-[42px] pt-2">
                       <Image
                         src={currentUserData?.avatar_url}
-                        // height={45}
-                        // width={45}
+
                         layout="fill"
                         className="shadow-md "
                         style={{ borderRadius: "50%" }}
@@ -592,7 +577,7 @@ const MobileHeader = () => {
                           </Link>
                           <label htmlFor="upload_profile">
                             <p className="cursor-pointer text-sm text-primary-600 ">
-                              {/* {currentUserData?.cruxAwardedMemeCoins} MC */}
+
                               View profile
                             </p>
                           </label>
@@ -602,58 +587,20 @@ const MobileHeader = () => {
                             className="hidden"
                             accept="image/*"
                             onChange={(e: any) => {
-                              // onUploadFile(e);
+
                             }}
                           />
                         </div>
                       </div>
                     </Link>
                     <div>
-                      {/* {menuArray?.map((item: any) => (
-                        <div key={item?.id} className={`${item?.className} `}>
-                          {item?.id === 5 ? (
-                            <button
-                              onClick={async () => {
-                                window.location.replace("/");
-                                window.localStorage.clear();
-                                setTimeout(() => {
-                                  setCurrentUserData({});
-                                  setSearchInput("");
-                                  logoutUser();
-                                }, 500);
-                              }}
-                              className="my-2 flex w-full gap-3 rounded-md px-2 py-1.5 text-[#564C4C] hover:bg-[#EDEDED]"
-                            >
-                              <div className="rounded-full bg-gray-300 p-4">
-                                {item?.icon}
-                              </div>
-                              <p className="mt-3">{item?.name}</p>
-                            </button>
-                          ) : (
-                            <Link href={item?.link}>
-                              <button
-                                onClick={async () => {
-                                  setTimeout(() => {
-                                    setMenuPopUp(false);
-                                  }, 300);
-                                }}
-                                className="my-2 flex w-full gap-3 rounded-md px-2 py-1.5 text-[#564C4C] hover:bg-[#EDEDED]"
-                              >
-                                <div className="rounded-full bg-gray-300 p-4">
-                                  {item?.icon}
-                                </div>
-                                <p className="mt-3">{item?.name}</p>
-                              </button>
-                            </Link>
-                          )}
-                        </div>
-                      ))} */}
+
                     </div>
                   </div>
                 </Popover>
               </div>
             </div>
-            {/* </div> */}
+
           </div>
         </>
       ) : null}
