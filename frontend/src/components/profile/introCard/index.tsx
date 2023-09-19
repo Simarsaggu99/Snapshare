@@ -4,9 +4,7 @@ import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 import SuggestFollowList from "../suggestFollowList";
 import { useUserCrux } from "@/hooks/common/query";
-// type introPropsInterface = {
-//   getSingleUser: any;
-// };
+
 
 const IntroCard = ({ introProps }: any) => {
   const { getSingleUser, getSuggestedFollowersList } = introProps;
@@ -176,5 +174,6 @@ const IntroCard = ({ introProps }: any) => {
     </div>
   );
 };
+
 
 export default IntroCard;

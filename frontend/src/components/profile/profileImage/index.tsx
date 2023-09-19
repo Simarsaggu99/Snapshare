@@ -39,14 +39,13 @@ const ProfileImage = ({
     <div className="">
       <div className="w-full ">
         {currentUser?.data?._id === getSingleUser?.data?.data?._id ? (
-          // <label htmlFor="profile_img">
+          
           <div className="absolute left-[5%] cursor-pointer xxxs:top-[47%]  xxs:top-[50.5%] xs:top-[55%]  md:top-[54%] md:left-[10%]  lg:top-[48%]  lg:left-[8%]  xl:top-[53%]  ">
             <div className="">
               {getSingleUser?.data?.data?.avatar_url || profilePic?.url ? (
                 <div
                   className="h-full w-full"
-                  // className="absolute  top-[30%] left-[4%] h-[80px]  w-[80px] rounded-full border-[5px] border-white  md:top-[48%] md:left-[10%]  md:h-[125px]  md:w-[125px] xl:top-[50%]  xl:h-[230px] xl:w-[230px]  xl:border-[10px] 2xl:h-[230px] 2xl:w-[230px]  2xl:border-[10px] "
-                  // className="absolute top-[40%] left-[4%] md:top-[48%] md:left-[10%] xl:top-[52%]   "
+                  
                 >
                   <div
                     onClick={() => {
@@ -58,8 +57,7 @@ const ProfileImage = ({
                       src={
                         profilePic?.url || getSingleUser?.data?.data?.avatar_url
                       }
-                      // height={77}
-                      // width={77}
+                      
                       className="rounded-full  "
                       alt="profile"
                       objectFit="cover"
@@ -70,7 +68,7 @@ const ProfileImage = ({
                     />
                   </div>
                   <div
-                    // className="absolute top-[2.9rem] left-[2.7rem] rounded-full bg-white py-2 px-2 md:left-[5rem]  md:top-[4.9rem]  xl:left-[9rem] xl:top-[10rem]"
+                    
                     className="lg: absolute top-[2.9rem]  left-[2.7rem] rounded-full bg-white py-2  px-2  sm:left-[5rem] sm:top-[4.9rem]  md:left-[5rem] md:top-[4.9rem] xl:left-[11rem] xl:top-[11.9rem] 2xl:top-[12rem] 2xl:left-[10.8rem]"
                   >
                     <div>
@@ -132,11 +130,10 @@ const ProfileImage = ({
                     <Image
                       src={smallLogo}
                       alt="Snapshare logo image"
-                      // height={150}
-                      // width={150}
+                      
 
                       layout="fill"
-                      // objectFit="fill"
+                     
                     />
                   </div>
                   {/* <div className="ml-2 mt-5 flex h-10 w-10 justify-center rounded-full md:mt-10 lg:mt-10 xl:mt-20">
@@ -194,8 +191,7 @@ const ProfileImage = ({
                     src={
                       profilePic?.url || getSingleUser?.data?.data?.avatar_url
                     }
-                    // height={212}
-                    // width={212}
+                    
                     className="rounded-full"
                     alt="profile"
                     objectFit="cover"
@@ -213,8 +209,7 @@ const ProfileImage = ({
                     <Image
                       src={smallLogo}
                       alt="Snapshare logo image"
-                      // height={150}
-                      // width={150}
+                      
                       className=""
                       layout="fill"
                       objectFit="contain"

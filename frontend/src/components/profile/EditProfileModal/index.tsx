@@ -44,6 +44,7 @@ const EditProfileModal = ({
     country: "Australia",
     city: "",
   };
+
   const [userFormDetails, setUserFormDetails] =
     useState<formDetailInterface>(formValues);
   const [calculateAge, setcalculateAge] = useState<number>();
@@ -54,6 +55,7 @@ const EditProfileModal = ({
     message: "",
     status: false,
   });
+
   const [bioError, setBioError] = useState({
     message: "",
     status: false,
@@ -85,6 +87,7 @@ const EditProfileModal = ({
         .then((res) => {});
     }
   };
+
   const onHandleSubmit = (e: any) => {
     e.preventDefault();
     if (userFormDetails?.bio?.length > 300) {
@@ -149,11 +152,8 @@ const EditProfileModal = ({
               });
             getPosts.refetch();
             getSingleUser.refetch();
-            // setTimeout(() => {
-            //   if (typeof window !== "undefined") {
-            //     window.location.reload();
-            //   }
-            // }, 700);
+            
+
           }
         });
     }
@@ -277,6 +277,8 @@ const EditProfileModal = ({
               e.stopPropagation();
               onUploadCover(e);
             }}
+
+
           />
 
           <div className="absolute  top-36 right-0 mx-4  cursor-pointer rounded-md bg-white py-1 px-4 ">
@@ -326,6 +328,7 @@ const EditProfileModal = ({
                           status: true,
                         });
                       });
+
                   }
                 }}
                 className="w-full rounded-[10px] border border-gray-300"
@@ -377,6 +380,7 @@ const EditProfileModal = ({
                     ...userFormDetails,
                     [name]: value,
                   });
+
                 }}
               >
                 <option className="hidden">Select gender</option>
@@ -450,5 +454,6 @@ const EditProfileModal = ({
     </div>
   );
 };
+
 
 export default EditProfileModal;

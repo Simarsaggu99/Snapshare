@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import { useGetSingleUser } from "@/hooks/user/query";
 import { getFirstLetter } from "@/utils/common";
 import Link from "next/link";
+
 const SuggestFollowList = ({
   getSuggestedFollowersList,
   getSingleUser,
@@ -29,11 +30,7 @@ const SuggestFollowList = ({
 
   const [isFollow, setIsFollow] = useState<string[]>([]);
   const unfollowUser = useUnfollowUser();
-  // const getSingleUser: any = useGetSingleUser({
-  //   pathParams: {
-  //     id: userId,
-  //   },
-  // });
+  
 
   const feedCollection = [
     { id: 0, img: tree },
@@ -51,5 +48,6 @@ const SuggestFollowList = ({
     </div>
   );
 };
+
 
 export default SuggestFollowList;
