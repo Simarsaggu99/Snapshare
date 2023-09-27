@@ -182,7 +182,7 @@ module.exports = (io) => {
         conversationId,
       });
 
-      if (conversation._id) {
+      if (conversation?._id) {
         io.to(conversationId.toString()).emit("mark-conversation-read", {
           userId,
           messages,
