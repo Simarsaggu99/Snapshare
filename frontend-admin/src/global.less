@@ -1,0 +1,241 @@
+@import '~antd/es/style/themes/default.less';
+// import richtext editor css
+@import '~react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+// import react image lightbox css
+@import '~react-image-lightbox/style.css';
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Material Icons';
+  font-style: normal;
+  src: url(https://fonts.gstatic.com/s/materialicons/v70/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)
+    format('woff2');
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.material-icons {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 24px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.formLabel {
+  font-weight: bold;
+}
+.ant-select-arrow{
+  color: #000
+      }
+
+.vidyaFormLabel {
+  color: #6b778c;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.ant-pro-sider-logo img {
+  height: 37px;
+}
+.ant-input{
+  border-radius: 5px !important;
+}
+.border {
+  border: 0.1rem solid var(--p-border-subdued, #dfe3e8);
+}
+.border-b {
+  border-bottom: 0.1rem solid var(--p-border-subdued, #dfe3e8);
+}
+.border-t {
+  border-top: 0.1rem solid var(--p-border-subdued, #dfe3e8);
+}
+.border-r {
+  border-right: 0.1rem solid var(--p-border-subdued, #dfe3e8);
+}
+.border-l {
+  border-left: 0.1rem solid var(--p-border-subdued, #dfe3e8);
+}
+
+.editor {
+  min-height: 256px;
+  padding: 16px;
+  border: 1px solid #dfe3e8;
+}
+
+.public-DraftStyleDefault-block {
+  margin: 0 !important;
+}
+.rdw-option-wrapper {
+  border: none;
+}
+.rdw-dropdown-selectedtext {
+  color: black;
+  font-weight: 400;
+}
+.AppModal {
+  .ant-modal-content {
+    .ant-modal-body {
+      padding: 0 !important;
+    }
+  }
+}
+
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+
+@media print {
+  html,
+  body {
+    height: initial !important;
+    overflow: initial !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+@media print {
+  .page-break {
+    display: block;
+    margin-top: 2rem;
+    page-break-before: auto;
+  }
+}
+
+@page {
+  margin-top: 6mm;
+  margin-bottom: 6mm;
+  size: auto;
+}
+
+// .ant-tabs-tab-active {
+//   background:#FFEDE8!important;
+//   // background: #FF5E34!important;
+//  border-bottom:4px solid  #ff5e34!important;
+
+
+// }
+// .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+//   color: #ff5e34 !important;
+
+
+// }
+// .ant-tabs-tab {
+//   padding: 15px !important;
+
+// }
+
+// .ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar, .ant-tabs-top > div > .ant-tabs-nav .ant-tabs-ink-bar{
+//   bottom: 77px!important;
+// }
+// .ant-btn-primary {
+//   background: #ff5e34!important;
+//   border: #ff5e34 !important;
+// }
+// .ant-menu{
+// background-color: #2D2525!important;
+
+// }
+// ul li.ant-menu-item a{
+//   color:green !important;
+// }
+
+// .ant-menu-inline .ant-menu-item::after{
+//   border:3px solid  #ff5e34!important;
+
+// }
+// .ant-menu-inline .ant-menu-item a::after{
+//   color:#ff5e34 !important;
+// }
+.modalStyle2 .ant-modal-header {
+  border-radius: 20px 20px 0 0!important;
+}
+.ant-pro-sider {
+  background-color: #2d2525 !important;
+}
+.ant-pro-global-header-layout-side {
+  background-color: #2d2525 !important;
+}
+.ant-menu-item-active {
+  background-color: rgb(113, 109, 116) !important;
+}
+// .ant-menu-item-selected ant-menu-item-only-child{
+//   background-color: rgb(113, 109, 116) !important;
+// }
+.ant-menu-item-selected{
+  // color: red !important;
+  ul li.ant-menu-item a {
+    color: red !important;
+  }
+}
+.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child a{
+  color: red !important;
+
+}
+// .ant-menu-item-only-child{
+//   background-color: rgb(113, 109, 116) !important;
+
+// }
+
+@primary-color: #EA4115;

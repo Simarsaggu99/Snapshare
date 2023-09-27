@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "snapshare-admin"
+  },
+  "targets": {
+    "snapshare-admin": {
+      "hosting": {
+        "live": [
+          "snapshare-admin"
+        ],
+        "test": [
+          "test-snapshare-admin"
+        ]
+      }
+    }
+  }
+}

@@ -97,7 +97,7 @@ const loginTemplate = (user) =>
 <table border="0" cellpadding="15" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad">
-<div align="left" class="alignment" style="line-height:10px"><img alt="Alternate text"</div>
+<div align="left" class="alignment" style="line-height:10px"><img alt="Alternate text" src="localhost:5000" style="display: block; height: auto; border: 0; width: 64px; max-width: 100%;" title="Alternate text" width="64"/></div>
 </td>
 </tr>
 </table>
@@ -133,7 +133,7 @@ const loginTemplate = (user) =>
 <td class="pad" style="padding-bottom:25px;padding-left:30px;padding-right:30px;padding-top:10px;">
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 18px; color: #555555; line-height: 1.5;">
-<p style="margin: 0; text-align: center; mso-line-height-alt: 33px;"><span style="font-size:22px;">Thanks for being a part of <strong>Snapshare </strong>community.</span></p>
+<p style="margin: 0; text-align: center; mso-line-height-alt: 33px;"><span style="font-size:22px;">Thanks for being a part of <strong>SnapShare </strong>community.</span></p>
 <p style="margin: 0; text-align: center; mso-line-height-alt: 33px;"><span style="font-size:22px;">We're glad you're here.</span></p>
 </div>
 </div>
@@ -195,7 +195,7 @@ const loginTemplate = (user) =>
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="text-align:center;width:100%;">
-<h3 style="margin: 0; color: #060606; font-size: 24px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; line-height: 120%; text-align: center; direction: ltr; font-weight: 700; letter-spacing: normal; margin-top: 0; margin-bottom: 0;"><sup><span class="tinyMce-placeholder">© Snapshare</span></sup></h3>
+<h3 style="margin: 0; color: #060606; font-size: 24px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; line-height: 120%; text-align: center; direction: ltr; font-weight: 700; letter-spacing: normal; margin-top: 0; margin-bottom: 0;"><sup><span class="tinyMce-placeholder">© SnapShare</span></sup></h3>
 </td>
 </tr>
 </table>

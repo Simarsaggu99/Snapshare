@@ -73,13 +73,6 @@ const updateOnBoarding = async (req, res, next) => {
     const createNotificationSetting = await UserAccountPreferenceSchema.create({
       userId: ObjectId(decryptedUserId),
     });
-
-    // if (accessToken && refreshToken) {
-    //   res.cookie("accessToken", `Bearer ${accessToken}`, {
-    //     secure: true,
-    //     sameSite: "none",
-    //   });
-    // }
     const createFolder = new folderModel({
       folder_name: "dafault folder",
       user: decryptedUserId.toString(),
