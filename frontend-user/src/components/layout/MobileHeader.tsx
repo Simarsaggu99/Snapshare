@@ -133,25 +133,11 @@ const MobileHeader = () => {
       className: "",
     },
     {
-      name: "My earnings",
-      icon: <MyEarningIcon />,
-      id: 2,
-      link: "/myearning",
-      className: "",
-    },
-    {
       name: "Message",
       icon: <MessageMenuIcon />,
       id: 4,
       link: "/messages?tab=All",
       className: "block md:hidden",
-    },
-    {
-      name: "Bounty",
-      icon: <BountyIcon />,
-      id: 3,
-      link: "/bounty",
-      className: "",
     },
     {
       name: "Settings",
