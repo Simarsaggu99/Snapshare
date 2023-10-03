@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const addFolderSchema = new Schema(
   {
     folder_name: { type: String, required: true, trim: true },
