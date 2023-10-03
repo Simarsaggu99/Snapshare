@@ -100,16 +100,11 @@ const Header = () => {
           setSearchInput("");
         }
       });
-    // setIsSearchOpen(false);
-    // .catch((err) => {
-    //   console.log("err", err);
-    //   router.push("/");
-    // });
+
     return () => {
       setMenuPopUp(false);
     };
   }, []);
-  // This code use for hide scroll bar on open modal and pop up
   useEffect(() => {
     if (isMessagePopUp || open.notify || isAddPost) {
       document.body.style.overflow = "hidden";
