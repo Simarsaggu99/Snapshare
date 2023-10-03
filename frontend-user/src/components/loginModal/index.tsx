@@ -17,9 +17,7 @@ const LoginModal = () => {
   return (
     <div>
       <div>
-        {/* {isModel && (
-          <div className="backdrop-blur-xs fixed top-0 left-0  z-40 h-screen  w-full overflow-hidden bg-black/60">
-            <div className="sticky left-0 right-0 top-[10%] mx-auto  mt-20 h-[80%] rounded-lg border border-black  bg-[#2D2525] sm:top-[29%]  sm:h-[48%] sm:w-[50%] md:w-[40%] lg:w-[30%] xl:w-[24%]"> */}
+        {}
         <Modal
           isVisiable={isModel}
           onClose={setIsModel}
