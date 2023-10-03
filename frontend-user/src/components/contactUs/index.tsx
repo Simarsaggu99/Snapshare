@@ -103,9 +103,7 @@ const ContactUs = () => {
     if (!form.name) {
       errors.name = "Name is required";
     }
-    // else if (!regexName.test(form.name)) {
-    //   errors.name = "Name format is not a valid!";
-    // }
+
     if (!form.email) {
       errors.email = "Email is required";
     } else if (!regexEmail.test(form.email)) {
@@ -120,7 +118,7 @@ const ContactUs = () => {
       errors.message = "Message is required";
     }
     setErrors(errors);
-    // Submit form if there are no errors
+
     if (Object.keys(errors).length === 0) {
       contactUs
         ?.mutateAsync({
@@ -205,7 +203,7 @@ const ContactUs = () => {
             </div>
             <div className=" mt-4 ">
               <textarea
-                // @ts-ignore: Unreachable code error
+
                 onChange={handleMessage}
                 placeholder="Enter message*"
                 value={form.message}

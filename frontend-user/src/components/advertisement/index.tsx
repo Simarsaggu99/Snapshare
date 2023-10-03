@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-// import advertisement from "../../public/images/notification.jpeg";
+
 import advertisement from "~/images/advertisement.png";
 
 const Advertisement = ({ isProfileOpen }: any) => {
@@ -16,12 +16,7 @@ const Advertisement = ({ isProfileOpen }: any) => {
       >
         <div className="relative mt-5 flex h-[300px] w-[100%] justify-center">
           Ad
-          {/* <Image
-            src={advertisement}
-            style={{ borderRadius: "10px" }}
-            alt="advertisement"
-            height={300}
-          /> */}
+
         </div>
       </div>
     </div>

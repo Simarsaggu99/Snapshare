@@ -110,7 +110,6 @@ export const SearchIcon = ({ fill, bg, clasName }: any) => {
       width="20"
       height="20 "
       fill={fill}
-      // className="{bg-white} bi bi-search"
       className={clasName}
       viewBox="0 0 16 16"
     >
@@ -191,7 +190,7 @@ export const No_Notification = () => {
     </svg>
   );
 };
-// -----------------------------profile-Icons-end------------------------
+
 
 export const InboxIcon = (type: any) => {
   return (
@@ -354,7 +353,7 @@ export const LockIcon = () => {
     </svg>
   );
 };
-//-----header icons -------
+
 export const CreatePost = () => {
   return (
     <svg
@@ -574,4 +573,3 @@ export const EditProfileIcon = () => {
   );
 };
 
-// -----------------------------profile-Icons-start------------------------

@@ -33,7 +33,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           "focus:outline-none focus-visible:ring focus-visible:ring-primary-500",
           "shadow-sm",
           "transition-colors duration-75",
-          //#region  //*=========== Variants ===========
+
           [
             variant === "primary" && [
               "bg-primary-500 text-white",
@@ -68,7 +68,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               "hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700",
             ],
           ],
-          //#endregion  //*======== Variants ===========
+
           "disabled:cursor-not-allowed",
           className
         )}

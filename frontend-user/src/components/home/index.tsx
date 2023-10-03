@@ -62,11 +62,7 @@ const Home = () => {
       setIsFirstStartindex(true);
     }
   }, [postType]);
-  // useEffect(() => {
-  //   if (Posts.length < 1) {
-  //     getPosts.refetch();
-  //   }
-  // }, []);
+
   useEffect(() => {
     if (userAddedPost?.length && Posts?.length) {
       setPosts([...userAddedPost, ...Posts]);
@@ -111,11 +107,6 @@ const Home = () => {
       setIsFirstStartindex(false);
     }
   }, [getPosts?.data, startIndex, currentPage]);
-  // useEffect(() => {
-  //   if (startIndex <= 0 && postCounts) {
-  //     setStartIndex(postCounts);
-  //   }
-  // }, [postType, Posts, postCounts]);
 
   return (
     <div className="h-full">

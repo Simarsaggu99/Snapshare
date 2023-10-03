@@ -10,7 +10,7 @@ const ClosePopUp = (popUpProps: popupInterface) => {
   const { menuPopUp, userCardRef, userRef, setMenuPopUp } = popUpProps;
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
+
       if (
         menuPopUp &&
         userCardRef.current &&
