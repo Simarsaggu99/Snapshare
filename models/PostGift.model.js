@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const PostGiftSchema = new Schema(
   {
     gift: { type: Schema.Types.ObjectId, ref: "Gift", required: true },
