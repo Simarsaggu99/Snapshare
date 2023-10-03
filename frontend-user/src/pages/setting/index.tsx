@@ -17,7 +17,7 @@ const Settings = () => {
   const settingArray = [
     { name: "Basic info", tab: "Basic-info", icon: <UserIcon />, id: 1 },
     { name: "Account Settings", tab: "Account-Settings", icon: "", id: 2 },
-    { name: "Redeem Settings", tab: "Redeem-Settings", icon: "", id: 3 },
+   
     {
       name: "Notification Settings",
       tab: "Notification-Settings",
