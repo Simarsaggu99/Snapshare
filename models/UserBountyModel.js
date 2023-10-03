@@ -1,7 +1,7 @@
 const dayjs = require("dayjs");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const UserBountySchema = new Schema(
   {
     userId: {
