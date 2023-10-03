@@ -25,8 +25,7 @@ const UserBountySchema = new Schema(
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }
 );
-// we need to create a model using it
+
 const UserBountyModel = mongoose.model("userBounty", UserBountySchema);
 
-// make this available to our users in our Node applications
 module.exports = UserBountyModel;
