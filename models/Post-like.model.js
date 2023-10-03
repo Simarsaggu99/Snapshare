@@ -1,7 +1,7 @@
 const dayjs = require("dayjs");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const PostLikeSchema = new Schema(
   {
     post_id: { type: Schema.Types.ObjectId, ref: "Post", required: true },
