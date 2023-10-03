@@ -1,4 +1,4 @@
-import Advertisement from "@/components/advertisement";
+// import Advertisement from "@/components/advertisement";
 import ClosePopUp from "@/components/closePopUp";
 import { StatisticsGraph } from "@/components/myEarning/StatisticsGraph";
 import {
@@ -9,7 +9,7 @@ import { useGetUserTransaction, useGetWallet } from "@/hooks/wallet/query";
 import { loggedInUser } from "@/store";
 import { useAtom } from "jotai";
 import Image from "next/image";
-import advertisement from "~/images/advertisement.png";
+// import advertisement from "~/images/advertisement.png";
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "react-google-charts";
 import Button from "@/components/buttons/Button";

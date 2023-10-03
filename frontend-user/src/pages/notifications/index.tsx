@@ -317,9 +317,9 @@ const Notification = () => {
 
         {/* </div> */}
         {/* </div> */}
-        <div className="mt-5  hidden w-[30%] md:block">
+        {/* <div className="mt-5  hidden w-[30%] md:block">
           <Advertisement />
-        </div>
+        </div> */}
       </div>
     </div>
   );

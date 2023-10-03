@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Tag/components/Sidebar";
-import Advertisement from "../advertisement";
+// import Advertisement from "../advertisement";
 import { useAtom } from "jotai";
 import {
   addedPost,
@@ -259,13 +259,13 @@ const Home = () => {
               </div>
             )}
           </div>
-          <div className="mt-4 hidden lg:block">
+          {/* <div className="mt-4 hidden lg:block">
             <Advertisement />
-          </div>
+          </div> */}
         </div>
-        <div className="mt-8  hidden md:block lg:hidden">
+        {/* <div className="mt-8  hidden md:block lg:hidden">
           <Advertisement />
-        </div>
+        </div> */}
       </div>
     </div>
   );

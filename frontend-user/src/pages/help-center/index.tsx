@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import personWithlaptop from "~/images/personWithlaptop.png";
 // import useState from 'react'
-import Advertisement from "@/components/advertisement";
+// import Advertisement from "@/components/advertisement";
 import TermsOfservices from "@/components/terms of services";
 import PrivacyPolicy from "@/components/help_center/PrivacyPolicy";
 import AboutUs from "@/components/help_center/AboutUs";
@@ -77,7 +77,7 @@ const ContactSection = () => {
                   Contact Us
                 </a>
               </li>
-              <li className="mr-2 border-b">
+              {/* <li className="mr-2 border-b">
                 <a
                   className={
                     "inline-block w-full rounded-t-md p-4 font-semibold" +
@@ -97,8 +97,8 @@ const ContactSection = () => {
                 >
                   FAQ
                 </a>
-              </li>
-              <li className="mr-2 border-b">
+              </li> */}
+              {/* <li className="mr-2 border-b">
                 <a
                   className={
                     "inline-block w-full rounded-t-md p-4 font-semibold " +
@@ -121,8 +121,8 @@ const ContactSection = () => {
                 >
                   Terms and Conditions
                 </a>
-              </li>
-              <li className="mr-2 border-b">
+              </li> */}
+              {/* <li className="mr-2 border-b">
                 <a
                   className={
                     "inline-block w-full rounded-t-md p-4 font-semibold" +
@@ -145,7 +145,7 @@ const ContactSection = () => {
                 >
                   Privacy Policy
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   className={
@@ -182,22 +182,22 @@ const ContactSection = () => {
                   >
                     <FAQ />
                   </div>
-                  <div
+                  {/* <div
                     className={
                       openTab === "terms_and_conditions" ? "block" : "hidden"
                     }
                     id="link3"
                   >
                     <TermsOfservices />
-                  </div>
-                  <div
+                  </div> */}
+                  {/* <div
                     className={
                       openTab === "privacy_policy" ? "block" : "hidden"
                     }
                     id="link4"
                   >
                     <PrivacyPolicy />
-                  </div>
+                  </div> */}
                   <div
                     className={
                       openTab === "community_guidelines" ? "block" : "hidden"
@@ -219,9 +219,9 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
-        <div className=" mt-5  hidden w-[20%] md:hidden lg:mr-20 lg:block xl:mr-20 2xl:mr-40 ">
+        {/* <div className=" mt-5  hidden w-[20%] md:hidden lg:mr-20 lg:block xl:mr-20 2xl:mr-40 ">
           <Advertisement />
-        </div>
+        </div> */}
       </div>
     </div>
   );

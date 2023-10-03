@@ -276,12 +276,12 @@ const SideCard = ({ postDetail }: any) => {
                 className="roudned-lg overflow-hidden bg-white px-4 py-3 shadow-md "
                 style={{ borderRadius: "10px" }}
               >
-                <span className="flex  justify-start text-xl font-bold text-gray-600 ">
+                {/* <span className="flex  justify-start text-xl font-bold text-gray-600 ">
                   Ad
-                </span>
+                </span> */}
 
                 {/* notifications */}
-                <div className="relative mt-5 w-[100%] ">
+                {/* <div className="relative mt-5 w-[100%] ">
                   <IMG
                     src={advertisement}
                     style={{ borderRadius: "10px" }}
@@ -289,7 +289,7 @@ const SideCard = ({ postDetail }: any) => {
                     height={300}
                   />
                 </div>
-                <div className="mt-3 "></div>
+                <div className="mt-3 "></div> */}
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
-import advertisement from "~/images/advertisement.png";
+// import advertisement from "~/images/advertisement.png";
 
 const Bounty = () => {
   const screenWidth = typeof window !== "undefined" ? window.screen.width : 768;
