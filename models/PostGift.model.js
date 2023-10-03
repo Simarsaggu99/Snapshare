@@ -11,7 +11,7 @@ const PostGiftSchema = new Schema(
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }
 );
-// the schema is useless so far
+
 // we need to create a model using it
 const PostGift = mongoose.model("PostGift", PostGiftSchema, "postgift");
 
