@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const MemeContestWinner = new Schema(
   {
     end_time: { type: Date },
