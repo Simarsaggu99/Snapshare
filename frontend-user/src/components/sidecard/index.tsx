@@ -132,7 +132,7 @@ const Sidecard = ({ cardprops }: any) => {
       setVisible(true);
     }
   };
-  // const singlePost=useSinglePost({pathParams:{id:postId}})
+ 
   const onAddComment = () => {
     const body = {
       comment,
@@ -170,8 +170,7 @@ const Sidecard = ({ cardprops }: any) => {
           ...singlePostData,
           comment_count: Number(singlePostData?.comment_count) + 1,
         });
-        // getComments.refetch();
-        // getPosts.refetch();
+        
         setComment("");
       });
   };
@@ -184,7 +183,7 @@ const Sidecard = ({ cardprops }: any) => {
         },
       })
       .then((res) => {
-        // getComments.refetch();
+        
         setSinglePostData({
           ...singlePostData,
           comment_count: Number(singlePostData?.comment_count) - 1,
@@ -419,14 +418,14 @@ const Sidecard = ({ cardprops }: any) => {
   };
   return (
     <div className="Sidecard-MainContainer h-full w-full rounded-lg bg-white pb-4 md:w-[90%] lg:m-0  lg:w-[100%] ">
-      {/* To make it responsive at xxs,md screen side card is hidden on lg Screen */}
+     
       <div className="Top-Container hidden  h-[65px] px-2 py-2 lg:block">
-        {/* top container having info of person */}
+      
 
         <div className="flex justify-between ">
           <div className="flex">
             {singlePostData?.user?.avatar_url ? (
-              // <Link href={`/profile/${singlePostData?.user?._id}`}>
+             
               <div
                 className=" relative w-[65px] cursor-pointer xxs:h-[45px] xxs:w-[45px] md:h-[45px] lg:h-[45px] lg:w-[45px]  "
                 onClick={() => {
@@ -464,7 +463,7 @@ const Sidecard = ({ cardprops }: any) => {
               >
                 {getFirstLetter(singlePostData?.user?.user_handle)}
               </div>
-              // </Link>
+              
             )}
             <div>
               <div
@@ -569,7 +568,7 @@ const Sidecard = ({ cardprops }: any) => {
           </div>
         </div>
         <div className="CommentSection2 h-fit ">
-          {/*comment icons  */}
+          
           <div className=" flex    w-full justify-between border-b border-t p-2 md:items-center">
             <div className=" xxs: md:px-1">
               <div className="ml-0 flex cursor-pointer gap-1">
@@ -640,7 +639,7 @@ const Sidecard = ({ cardprops }: any) => {
       </div>
       <div className="section2   lg:h-[580px] ">
         <div className="inputfield  b sticky mb-0 ">
-          {/* section where comment input field line comes */}
+         
           {currentUser?.data?._id && (
             <div className="main ml-2 flex justify-start  ">
               <div className="image h-[55px] w-[50px] cursor-pointer px-2 py-1 ">
@@ -686,26 +685,9 @@ const Sidecard = ({ cardprops }: any) => {
                 {visible && (
                   <div className="absolute  right-8 bottom-3.5 flex justify-between text-justify text-xl text-[#FF5E34] ">
                     <button
-                    // type="button"
-                    // className="rounded-full "
-                    // onClick={() => setGallary(!gallary)}
+                    
                     >
-                      {/* <MyCollection /> */}
-                      {/* My */}
-                    </button>
-                    {/* <button
-                    type="button"
-                    className=":bg-gray-700 ml-3 rounded-full   "
-                  >
-                    <AttachmentIcon />
-                  </button> */}
-
-                    {/* <button
-                    type="button"
-                    className=":bg-gray-700 ml-3 rounded-full  "
-                  >
-                    <SmileIcon />
-                  </button> */}
+                      
                   </div>
                 )}
                 {gallary && (
@@ -778,40 +760,21 @@ const Sidecard = ({ cardprops }: any) => {
                                 </span>
                               </p>
                             </Link>
-                            {/* {isCommentEdit === item?._id ? (
-                          <div className="m-1 mr-2 flex w-[17px] gap-1 pr-10  ">
-                            <input
-                              value={editComment}
-                              onChange={(e) => {
-                                setEditComment(e.target.value);
-                              }}
-                              type="text"
-                              className="h-8 rounded px-2 py-1.5"
-                            />
-                            <button
-                              onClick={() => {
-                                onEditComment(item?._id);
-                              }}
-                              className=" rounded-md border bg-primary-500 px-2 text-sm text-white shadow-md"
-                            >
-                              Update
-                            </button>
-                          </div>
-                        ) : ( */}
+                            
                             <div
                               className="
                          break-all px-1  pb-1 pt-1 text-left leading-6 text-gray-600 "
                             >
                               <p>{item?.comment}</p>
                             </div>
-                            {/* )} */}
+                            
 
                             <p className="pl-1 text-[14px] text-[#858585] ">
                               {dayjs(item?.created_at).fromNow()}
                             </p>
                           </div>
                         </div>
-                        {/* <p>{item.comment}</p> */}
+                        
                       </div>
                       <div className="">
                         {currentUser?.data?._id === item?.user?._id ||
@@ -900,7 +863,7 @@ const Sidecard = ({ cardprops }: any) => {
       )}
       {isShareModal && <SharePostModel sharePostProps={sharePostProps} />}
     </div>
-  );
+  );{
 };
 
 export default Sidecard;

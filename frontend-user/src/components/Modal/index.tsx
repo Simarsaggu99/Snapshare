@@ -11,7 +11,7 @@ const Modal = ({
   loginModal,
   zIndex,
 }: any) => {
-  // const { isVisiable, setModal } = modalProps;
+  
   useEffect(() => {
     const close = (e: any) => {
       if (e.keyCode === 27) {

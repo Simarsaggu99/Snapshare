@@ -15,7 +15,7 @@ export type Tagprops = {
 };
 
 const Tags: FC<Tagprops> = ({ hastag }) => {
-  // const [search, setSearch] = useAtom(globalS  earch);
+  
   const [, setLoading] = useAtom(tagSearchLoading);
   const router = useRouter();
   return (

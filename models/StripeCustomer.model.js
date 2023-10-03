@@ -23,5 +23,4 @@ const StripeCustomer = model(
   "stripecustomer"
 );
 
-// make this available to our users in our Node applications
 module.exports = StripeCustomer;

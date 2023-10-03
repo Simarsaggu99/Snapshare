@@ -31,7 +31,6 @@ const redeemRequestSchema = new Schema(
   }
 );
 // we need to create a model using it
-//rePostSchema.index({post_id: 1, user: 1}, {unique: true});
 const RedeemRequest = mongoose.model(
   "redeem",
   redeemRequestSchema,

@@ -31,7 +31,7 @@ const MyCollectionModal: FC<mycollection> = ({
   const getCollectionFolders: any = useGetCollectionFolders({});
   const [isMyCollectionPost, setIsMyCollectionPost] = useState();
   const [mycollectionList, setMycollectionList] = useState([]);
-  //   if (isMyCollectionPost) {
+  
   useEffect(() => {
     if (isMyCollectionPost) {
       getCollectionPosts({
@@ -63,7 +63,7 @@ const MyCollectionModal: FC<mycollection> = ({
         ...prev,
       ];
     });
-    // scrollToBottom();
+    
   };
 
   return (
@@ -89,7 +89,7 @@ const MyCollectionModal: FC<mycollection> = ({
             >
               <div className="mt-5 grid grid-cols-2 gap-5 ">
                 {getCollectionFolders?.data?.data?.map((item: any) => (
-                  // <Link href={`mycollection/${item?._id}`} key={item?._id}>
+                  
                   <button
                     key={item?._id}
                     onClick={() => {
@@ -100,9 +100,9 @@ const MyCollectionModal: FC<mycollection> = ({
                     <div>
                       <div className="flex justify-center ">
                         <div
-                          // onClick={() => {
+                          
 
-                          // }}
+                          
                           className="w-max rounded-full bg-gray-300 p-4"
                         >
                           <FolderIcon />
@@ -111,7 +111,7 @@ const MyCollectionModal: FC<mycollection> = ({
                       <div className="mt-2">{item?.folder_name}</div>
                     </div>
                   </button>
-                  // </Link>
+                  
                 ))}
               </div>
               <div className="grid  grid-cols-2 gap-10 p-5  ">
@@ -135,7 +135,7 @@ const MyCollectionModal: FC<mycollection> = ({
                             ],
                           },
                           (data: any) => {
-                            // sendMessageAcknowledgement(data);
+                            
                             addNewMessage(data, item);
                             setIsMyCollection(false);
                           }

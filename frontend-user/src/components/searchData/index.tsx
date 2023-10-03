@@ -153,104 +153,7 @@ const SearchData = () => {
               </div>
             ))}
           </div>
-          {/* <div className="relative flex justify-end">
-            <p
-              className="cursor-pointer text-sm text-gray-400"
-              ref={actionRef}
-              onClick={(e) => {
-                e.stopPropagation();
-                setPopularModal(!popularModal);
-              }}
-            >
-              Sort by:
-              <span className="text-secondary-700">{postTypes}</span>
-            </p>
-            <div>
-              <svg
-                ref={actionRef}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setPopularModal(!popularModal);
-                }}
-                xmlns="http://www.w3.org/2000/svg"
-                height="20"
-                width="20"
-                viewBox="0 0 320 512"
-                className="cursor-pointer select-none"
-                fill="#858585"
-              >
-                <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-              </svg>
-            </div>
-            <Popover
-              isVisible={popularModal}
-              onclose={() => {
-                setPopularModal(false);
-              }}
-              userRef={actionRef}
-            >
-              <div className="absolute right-2 top-5 z-10 block rounded-[10px] bg-white  py-2 px-4 shadow">
-                <div className="my-2 pb-0.5">
-                  <label
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setPostTypes("popular");
-                      setPopularModal(false);
-                    }}
-                    className="container"
-                  >
-                    <span
-                      className={`label cursor-pointer ${
-                        postTypes === "popular" && "text-primary-600"
-                      }`}
-                    >
-                      Popular
-                    </span>
-                    <input
-                      checked={postTypes === "popular"}
-                      onChange={(e) => {
-                        e.stopPropagation();
-                        setPostTypes("popular");
-                      }}
-                      type="radio"
-                      name="isPopular"
-                      value="popular"
-                    />
-                    <span className="radio"></span>
-                  </label>
-                </div>
-                <div className="my-2">
-                  <label
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setPostTypes("Latest");
-                      setPopularModal(false);
-                    }}
-                    className="container"
-                  >
-                    <span
-                      className={`label cursor-pointer ${
-                        postTypes === "Latest" ? "text-primary-600" : ""
-                      }`}
-                    >
-                      Latest
-                    </span>
-                    <input
-                      checked={postTypes === "Latest"}
-                      onChange={(e) => {
-                        e.stopPropagation();
-                        setPostTypes("Latest");
-                      }}
-                      type="radio"
-                      name="isPopular"
-                      value="Latest"
-                    />
-                    <span className="radio"></span>
-                  </label>
-                </div>
-              </div>
-            </Popover>
-          </div> */}
+          
         </div>
         {loading ? (
           <div className="mt-32">
@@ -301,16 +204,14 @@ const SearchData = () => {
                                   {getFirstLetter(item?.user_handle)}
                                 </div>
                               )}
-                              {/* </Link> */}
+                              
                             </div>
                             <div className="mx-3 flex flex-col ">
                               <span className="text-lg  font-medium">
                                 {" "}
                                 {item?.user_handle}
                               </span>
-                              {/* <p className="font-mediun text-base text-gray-500">
-                              {item?.name}
-                            </p> */}
+                              
                             </div>
                           </div>
                         ))}
@@ -368,7 +269,7 @@ const SearchData = () => {
                   )
                 )
               ) : null}
-              {/* </InfiniteScroll> */}
+              
             </div>
             {tab === "all" &&
               !allSearchData?.post?.length &&

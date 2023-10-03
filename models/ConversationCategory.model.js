@@ -26,5 +26,5 @@ const Conversation = mongoose.model(
   "conversationCategory"
 );
 
-// make this available to our users in our Node applications
+//  make this available to our users in our Node applications
 module.exports = Conversation;

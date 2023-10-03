@@ -180,7 +180,7 @@ const AccountSettings = () => {
             id=""
           />
           <p className="text-sm font-medium text-red-500">
-            {/* {username(userAccountData?.user_handle)} */}
+            
             {isUserHandleAvaible?.status && isUserHandleAvaible?.message}
           </p>
         </div>
@@ -203,16 +203,13 @@ const AccountSettings = () => {
                 id=""
               />
             </div>
-            {/* <div className="mt-2 flex w-[100%] cursor-pointer  gap-2 rounded-md  border px-7 pb-2 pt-2 text-sm  text-blue-700 xs:w-[50%] sm:w-[39%] sm:pb-0">
-              <BsCheckCircleFill className=" mt-1 text-blue-600" />
-              <p className="mt-0.5">Verify Eamil</p>
-            </div> */}
+            
           </div>
         </div>
         <div className="relative  my-3 flex justify-between pt-2">
           <button
             onClick={() => {
-              // deleteUser.mutateAsync();
+              
               setIsPopUp(true);
             }}
             className="pl-1 text-sm text-primary-600"
@@ -245,10 +242,10 @@ const AccountSettings = () => {
           onclose={setIsPopUp}
           isVisible={isPopUp}
         >
-          {/* {isPopUp && ( */}
+          
           <div
             className="p-4 "
-            // className="absolute bottom-10 ml-4 h-40 w-[70%] rounded-lg bg-white p-4 "
+           
             style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}
           >
             <div className="mt-2 pb-5 text-gray-800 ">
@@ -289,7 +286,7 @@ const AccountSettings = () => {
               </Button>
             </div>
           </div>
-          {/* )} */}
+         
         </Popover>
       </div>
       <div style={{ position: "relative" }}>

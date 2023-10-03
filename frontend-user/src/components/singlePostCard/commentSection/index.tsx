@@ -37,7 +37,7 @@ const CommentSection = ({ commentProps }: any) => {
   const actionRef = React.useRef<HTMLButtonElement | any>(null);
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
+      
       if (
         actionPopUp?.isVisible &&
         userCardRef.current &&
@@ -350,16 +350,13 @@ const CommentSection = ({ commentProps }: any) => {
                         alt="profile "
                         height={50}
                         width={50}
-                        // layout="fill"
+                        
                         objectFit="cover"
                         style={{ borderRadius: "50%" }}
                       />
                     </div>
                   ) : (
-                    // </div>
-                    // <div className="flex h-[45px] w-[45px] items-center justify-center rounded-full bg-gray-400 text-white md:h-[50px] md:w-[50px] ">
-                    //   {getInitials(item?.user?.name)}
-                    // </div>
+                   
                     <div className="h-[40px] w-[40px]">
                       <Avatar name={item?.user?.user_handle} />
                     </div>
@@ -410,7 +407,7 @@ const CommentSection = ({ commentProps }: any) => {
                           <div className="rounded-[5px] px-2.5 py-1.5 hover:bg-[#EDEDED]">
                             <button
                               onClick={() => {
-                                // setCommentEdit(item);
+                                
                                 setEditComment(item);
                                 setComment(item.comment);
                                 setActionPopUp({
@@ -444,38 +441,9 @@ const CommentSection = ({ commentProps }: any) => {
                     )}
                   </div>
                 </div>
-                {/* <div className="my-2.5 mt-3">
-                  {editComment?._id === item?._id ? (
-                    <div className="flex w-full gap-3 ">
-                      <input
-                        value={editComment?.comment}
-                        onChange={(e) => {
-                          setEditComment({
-                            ...editComment,
-                            comment: e.target.value,
-                          });
-                        }}
-                        type="text"
-                        className=" h-8 rounded xxxs:w-32   lg:w-80 "
-                      />
-                      <button
-                        onClick={() => {
-                          onEditComment(item?._id);
-                        }}
-                        className="rounded-md border bg-primary-500 px-2 text-sm text-white shadow-md"
-                      >
-                        Update
-                      </button>
-                    </div>
-                  ) : (
-                    <p className="text-[16px] font-medium text-[#858585]">
-                      {item?.comment}
-                    </p>
-                  )}
-                </div> */}
-                {/* <div className="md:w-[300px] lg:w-[250px] "> */}
+                
                 <p
-                  // style={{ maxWidth: "300px", whiteSpace: "pre-line" }}
+                  
                   className=" w-[90%] break-all  text-[16px]  font-medium text-[#858585]"
                 >
                   {item?.comment}

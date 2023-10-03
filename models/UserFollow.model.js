@@ -12,5 +12,4 @@ const userFollowSchema = new Schema(
 
 const UserFollow = model("UserFollow", userFollowSchema, "userfollows");
 
-// make this available to our users in our Node applications
 module.exports = UserFollow;

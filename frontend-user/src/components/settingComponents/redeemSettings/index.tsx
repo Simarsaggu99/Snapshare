@@ -48,7 +48,7 @@ const RedeemSettings = () => {
       <div style={{ position: "relative" }}>
         <Toaster
           containerClassName="mt-[56px]"
-          // containerStyle={{ position: "absolute", top: 0 }}
+          
           position="top-center"
           toastOptions={{
             duration: 2000,
@@ -86,19 +86,7 @@ const RedeemSettings = () => {
         </div>
         <div className="my-3">
           <p className="text-sm ">Mode of Payment</p>
-          {/* <Input
-            onchange={(e: any) => {
-              console.log("e", e);
-              setAccountDetails({
-                ...accountDetails,
-                mode: e.target.value,
-              });
-            }}
-            className="mt-2 w-full rounded-md  border border-gray-300"
-            type="text"
-            name=""
-            id=""
-          /> */}
+          
           <select
             value={accountDetails?.mode}
             onChange={(e) => {
@@ -109,7 +97,7 @@ const RedeemSettings = () => {
             }}
             className="ring-none mt-2 w-full   rounded-md  border border-gray-300 outline-none ring-0"
           >
-            {/* <option value="">Select payment mode</option> */}
+            
 
             <option value="googlepay">UPI ID</option>
             <option value="paypal">Pay pal</option>

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const addFolderSchema = new Schema(
   {
     folder_name: { type: String, required: true, trim: true },
@@ -13,5 +13,5 @@ const addFolderSchema = new Schema(
 // we need to create a model using it
 const FolderModel = mongoose.model("folder", addFolderSchema, "folder");
 
-// make this available to our users in our Node applications
+//  make this available to our users in our Node applications
 module.exports = FolderModel;

@@ -19,5 +19,5 @@ const creatorSchema = new Schema(
 
 const Creator = model("Creator", creatorSchema, "creator");
 
-// make this available to our users in our Node applications
+// make this available to our users in our Node  applications
 module.exports = Creator;

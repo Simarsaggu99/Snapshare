@@ -40,7 +40,7 @@ const CommentsideCard = () => {
             <div className="relative h-10 w-10 rounded-full p-3">
               <Image
                 src={userProfile}
-                // style={{ borderRadius: "10px" }}
+
                 alt={"img"}
                 layout="fill"
                 objectFit="cover"

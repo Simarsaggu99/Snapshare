@@ -23,5 +23,4 @@ const StripeProduct = model(
   "stripeproduct"
 );
 
-// make this available to our users in our Node applications
 module.exports = StripeProduct;

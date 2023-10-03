@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const MemeContestWinner = new Schema(
   {
     end_time: { type: Date },
@@ -22,5 +22,5 @@ const MemeContestWinnerModel = mongoose.model(
   "contestWinner"
 );
 
-// make this available to our users in our Node applications
+// make this  available to our users in our Node applications
 module.exports = MemeContestWinnerModel;

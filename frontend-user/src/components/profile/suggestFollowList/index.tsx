@@ -29,11 +29,7 @@ const SuggestFollowList = ({
 
   const [isFollow, setIsFollow] = useState<string[]>([]);
   const unfollowUser = useUnfollowUser();
-  // const getSingleUser: any = useGetSingleUser({
-  //   pathParams: {
-  //     id: userId,
-  //   },
-  // });
+  
 
   const feedCollection = [
     { id: 0, img: tree },
@@ -64,16 +60,10 @@ const SuggestFollowList = ({
             <Swiper
               slidesPerView={2}
               spaceBetween={5}
-              //   autoplay={{
-              //     delay: 2500,
-              //     disableOnInteraction: false,
-              //   }}
+             
               slidesPerGroupSkip={4}
               grabCursor={true}
-              //   keyboard={{
-              //     enabled: true,
-              //   }}
-              //   modules={[Autoplay]}
+              
               autoplay={false}
               breakpoints={{
                 320: {
@@ -123,8 +113,7 @@ const SuggestFollowList = ({
                                 alt="profile"
                                 layout="fill"
                                 objectFit="cover"
-                                // height={"125px"}
-                                // width={"125px"}
+                                
                               />
                             </div>
                           ) : (
@@ -136,12 +125,7 @@ const SuggestFollowList = ({
                       </button>
                       <Link href={`/profile/${item?._id}`}>
                         <div
-                          // style={{
-                          //   whiteSpace: "nowrap",
-                          //   width: "110px",
-                          //   overflow: "hidden",
-                          //   textOverflow: "ellipsis",
-                          // }}
+                          
                           className=" w-[105px] cursor-pointer overflow-hidden text-ellipsis text-center text-[14px] font-semibold sm:w-[120px]"
                         >
                           {item?.user_handle}

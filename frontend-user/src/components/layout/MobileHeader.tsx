@@ -93,21 +93,16 @@ const MobileHeader = () => {
         ) {
           window.localStorage.clear();
           setCurrentUserData({});
-          // router.push("/");
           window.location.replace("/");
           setSearchInput("");
         }
       });
-    // setIsSearchOpen(false);
-    // .catch((err) => {
-    //   console.log("err", err);
-    //   router.push("/");
-    // });
+
     return () => {
       setMenuPopUp(false);
     };
   }, []);
-  // This code use for hide scroll bar on open modal and pop up
+
   useEffect(() => {
     if (isMessagePopUp || open.notify || isAddPost) {
       document.body.style.overflow = "hidden";
@@ -161,7 +156,6 @@ const MobileHeader = () => {
       name: "Log out",
       icon: <LogoutIcon />,
       id: 5,
-      // link: "/",
       className: "",
     },
   ];
@@ -174,9 +168,7 @@ const MobileHeader = () => {
 
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
-      // then close the menu
-      // setIsActive(false);
+
       if (
         open &&
         reportCardRef.current &&
@@ -195,8 +187,7 @@ const MobileHeader = () => {
   const logoutUser = async () => {
     await logOutUser().then(() => {
       setCurrentUser();
-      // location.reload();
-      // router.push("/");
+
     });
   };
 
@@ -316,19 +307,12 @@ const MobileHeader = () => {
                 </button>
               </div>
 
-              {/* <div className=" relative mx-1 flex items-center justify-end md:mx-5 lg:mx-0 lg:justify-center 2xl:mr-28"> */}
+
               {showInput && (
                 <div className="relative block  ">
                   <div
                     ref={ref}
-                    // className={`search-wrapper  ${
-                    //   showInput ? "active  " : ""
-                    // } `}
-                    // style={{
-                    //   position: showInput ? "absolute" : "relative",
-                    //   top: showInput ? "50%" : "",
-                    //   left: showInput ? "50%" : "",
-                    // }}
+
                   >
                     <div className=" w-full">
                       <div
@@ -468,7 +452,6 @@ const MobileHeader = () => {
                   <button
                     ref={messageRef}
                     onClick={() => {
-                      // setIsMessagePopUp(!isMessagePopUp);
                       router.push("/messages?tab=All");
                     }}
                     className={`relative mx-2  rounded-full bg-[#564C4C] px-3  py-3    `}
@@ -499,15 +482,14 @@ const MobileHeader = () => {
                   onClick={() => {
                     setMenuPopUp(!menuPopUp);
                   }}
-                  // className="relative  mx-4 rounded-full sm:mx-10 md:mx-0 lg:h-[46px] lg:w-[46px]"/
+
                   className={` cursor-pointer    lg:mx-0 `}
                 >
                   {currentUserData?.avatar_url ? (
                     <div className="relative h-[42px] w-[42px] pt-2">
                       <Image
                         src={currentUserData?.avatar_url}
-                        // height={45}
-                        // width={45}
+
                         layout="fill"
                         className="shadow-md "
                         style={{ borderRadius: "50%" }}
@@ -566,7 +548,7 @@ const MobileHeader = () => {
                           </Link>
                           <label htmlFor="upload_profile">
                             <p className="cursor-pointer text-sm text-primary-600 ">
-                              {/* {currentUserData?.cruxAwardedMemeCoins} MC */}
+
                               View profile
                             </p>
                           </label>
@@ -576,7 +558,7 @@ const MobileHeader = () => {
                             className="hidden"
                             accept="image/*"
                             onChange={(e: any) => {
-                              // onUploadFile(e);
+
                             }}
                           />
                         </div>
@@ -627,7 +609,7 @@ const MobileHeader = () => {
                 </Popover>
               </div>
             </div>
-            {/* </div> */}
+
           </div>
         </>
       ) : null}

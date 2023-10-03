@@ -4,7 +4,7 @@ import {
   notifySuccess,
 } from "@/components/UIComponents/Notification";
 import Popover from "@/components/UIComponents/Popover";
-// import { useFollowUser } from "@/hooks/mycollection/mutation";
+
 import { useDeltePost } from "@/hooks/post/mutation";
 import { useCheckTodayPostCount } from "@/hooks/post/query";
 
@@ -72,12 +72,11 @@ const PostAction = ({
     getPosts,
     setIsReportModal,
     setIsCollectionModal,
-    // reportModalRef,
+    
     setIsAddPost,
     setIsPostEdit,
     setSinglePostDetails,
-    // setPosts,
-    // Posts,
+    
     setpopUpMenu,
     userCardRef,
     isProfileOpen,
@@ -154,30 +153,7 @@ const PostAction = ({
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsPopUp(true);
-                  // setpopUpMenu({
-                  //   isVisible: false,
-                  //   id: "",
-                  // });
-                  // deletePost
-                  //   .mutateAsync({
-                  //     pathParams: { id: item?._id },
-                  //   })
-                  //   .then((res: any) => {
-                  //     if (res?.message === "success") {
-                  //       setPosts(
-                  //         Posts?.filter((fil: any) => fil?._id !== item?._id)
-                  //       );
-                  //       notifySuccess({
-                  //         message: "Your post has been deleted successfully",
-                  //       });
-                  //     }
-                  //   })
-                  //   .catch((err) => {
-                  //     notifyError({
-                  //       message:
-                  //         "Opps something went wrong while delete you post. Please try again.",
-                  //     });
-                  //   });
+                  
                 }}
                 className="flex w-full gap-3 rounded-[5px] px-2.5 py-1.5 hover:bg-[#EDEDED]"
               >
@@ -194,7 +170,7 @@ const PostAction = ({
               >
                 <div
                   className="p-4 text-sm"
-                  // className="absolute bottom-10 ml-4 h-40 w-[70%] rounded-lg bg-white p-4 "
+                  
                   style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}
                 >
                   <div className="mt-2 pb-5 text-gray-800 ">
@@ -329,7 +305,7 @@ const PostAction = ({
                                 })
                               );
                             }
-                            // notifySuccess({ message: "" });
+                            
                           });
                       } else {
                         setIsModel(true);
@@ -465,7 +441,7 @@ const PostAction = ({
                 )}
               </div>
               <div
-                // ref={reportModalRef}
+                
                 className=""
               >
                 <button

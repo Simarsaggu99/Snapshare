@@ -14,7 +14,7 @@ const Input = ({
   return (
     <div>
       <input
-      // onKeyPress={()=>}
+
         value={value}
         onFocus={onFocus}
         type={type}

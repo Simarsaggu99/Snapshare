@@ -92,7 +92,7 @@ const AddPost: FC<postPropsinterface> = ({
   }, [isAddPost]);
 
   useEffect(() => {
-    // if (singlePostDetails) {
+    
     setDescription(singlePostDetails?.description || "");
     setFinalTags(singlePostDetails?.tags || []);
     if (singlePostDetails?.media?.url || singlePostDetails?.post?.media?.url) {
@@ -102,16 +102,16 @@ const AddPost: FC<postPropsinterface> = ({
           : singlePostDetails?.post?.media?.url,
       });
     }
-    // }
+    
   }, [singlePostDetails, isAddPost]);
 
   const createpost = useCreatePost();
-  // const allPost = useGetAllPost({ query: { keyword: "" } });
+  
   const updatePost = useEditPost();
-  // const getPosts: any = useGetAllPost({
-  //   filterBy: postTypes,
-  //   pageSize: 0,
-  // });
+  
+  
+  
+  
   const addPost = (contentData: any, des: string, tags: any[]) => {
     const data = uploadData;
 
@@ -177,7 +177,7 @@ const AddPost: FC<postPropsinterface> = ({
           if (res?.success) {
             notifySuccess({ message: "Post Created Successfully" });
             if (Posts?.length <= 0 && route.asPath !== "/") {
-              // getPosts.refetch();
+              
             }
             setUserAddedPost([
               {
@@ -186,15 +186,15 @@ const AddPost: FC<postPropsinterface> = ({
                 user: currentUser?.data,
               },
             ]);
-            // setPosts([
-            //   {
-            //     ...res?.data,
-            //     media: res?.data?.media[0]?.url && res?.data?.media[0],
-            //     user: currentUser?.data,
-            //   },
-            //   ...Posts,
-            // ]);
-            // }
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             setIsAddPost(false);
             setUploadData(undefined);
@@ -226,7 +226,7 @@ const AddPost: FC<postPropsinterface> = ({
             setUploadData(undefined);
             setDescription("");
             setFinalTags([]);
-            // allPost.refetch();
+            
             setLoading(false);
             setUploadDetails(undefined);
             checkTodayPostCount.refetch();
@@ -249,7 +249,7 @@ const AddPost: FC<postPropsinterface> = ({
     if (!file?.name?.includes(".gif")) {
       new Compressor(file, {
         quality: 0.2,
-        // mimeType: "image/s",
+        
         success: (compressedResult) => {
           const myFile = new File([compressedResult], file.name, {
             type: file.type,
@@ -258,24 +258,24 @@ const AddPost: FC<postPropsinterface> = ({
           const contentData = Object.assign(myFile, url);
           setUploadData(contentData || {});
           setUpImg(undefined);
-          // addPost(contentData, des, tags);
+          
         },
       });
     } else {
-      // new Compressor(file, {
-      //   quality: 0.2,
-      //   mimeType: "image/gif",
-      //   success: (compressedResult) => {
+      
+      
+      
+      
       const url = { url: URL.createObjectURL(file || "") };
       const contentData = Object.assign(file, url);
       setUploadData(contentData || {});
       setUpImg(undefined);
-      // },
-      // });
-      // const url = { url: URL.createObjectURL(file || "") };
-      // const contentData = Object.assign(file, url);
-      // setUploadData(contentData || {});
-      // setUpImg(undefined);
+      
+      
+      
+      
+      
+      
     }
   };
   const onSelectFile = (e: any) => {
@@ -298,7 +298,7 @@ const AddPost: FC<postPropsinterface> = ({
             (blobFile) =>
               new File([blobFile], uploadDetails?.name, { type: "image/png" })
           );
-        // setUploadData(undefined);
+        
         const newFile = await onUploadFile(file, des, tags);
 
         return newFile;
@@ -343,9 +343,9 @@ const AddPost: FC<postPropsinterface> = ({
                   {isPostEdit || singlePostDetails?._id ? "Update" : "Create"}{" "}
                   Post{" "}
                 </p>
-                {/* <div className="relative"> */}
+                <div className="relative">
                 <button
-                  // className=" sticky left-32 mt-2"
+
                   onClick={() => {
                     setIsAddPost(false);
                     setUploadData(undefined);
@@ -360,7 +360,7 @@ const AddPost: FC<postPropsinterface> = ({
                     height="16"
                     viewBox="0 0 16 16"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http:
                   >
                     <g clipPath="url(#clip0_76_1341)">
                       <path
@@ -386,7 +386,7 @@ const AddPost: FC<postPropsinterface> = ({
                     style={{ borderRadius: "50%" }}
                     alt="profile"
                     objectFit="cover"
-                    // objectPosition={"top left"}
+                    
                   />
                 ) : (
                   <div className="  flex h-[64px] w-[64px] cursor-pointer  items-center justify-center rounded-full bg-gray-400 text-white                                                                                                                                                                                                                                                    ">
@@ -435,8 +435,8 @@ const AddPost: FC<postPropsinterface> = ({
                           zIndex: 1000,
                         }}
                         objectFit="contain"
-                        // objectFit={"cover"}
-                        // objectPosition="top left"
+                        
+                        
                         src={singlePostDetails?.media?.url}
                         height={410}
                         width={600}
@@ -450,8 +450,8 @@ const AddPost: FC<postPropsinterface> = ({
                           zIndex: 1000,
                         }}
                         objectFit="contain"
-                        // objectFit={"cover"}
-                        // objectPosition="top left"
+                        
+                        
                         src={uploadData?.url}
                         height={410}
                         width={600}
@@ -475,7 +475,7 @@ const AddPost: FC<postPropsinterface> = ({
                               viewBox="image/*0 0 42 42"
                               fill="none"
                               className=""
-                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns="http:
                             >
                               <path
                                 d="M0.205566 17.7396C0.205566 13.4614 0.205566 9.17408 0.205566 4.89588C0.205566 2.05597 2.05609 0.205444 4.89601 0.205444C13.4799 0.205444 22.0638 0.205444 30.6385 0.205444C33.4509 0.205444 35.3106 2.05597 35.3106 4.8684C35.3106 10.5666 35.3106 16.2647 35.3106 21.972C35.3106 23.1446 34.3578 23.8867 33.3593 23.5111C32.773 23.2912 32.4065 22.769 32.4065 22.0911C32.3974 20.9643 32.4065 19.8375 32.4065 18.7107C32.4065 14.0935 32.4065 9.47639 32.4065 4.85924C32.4065 3.68663 31.8477 3.12781 30.6751 3.12781C22.0638 3.12781 13.4524 3.12781 4.84104 3.12781C3.68675 3.12781 3.12793 3.68663 3.12793 4.83176C3.12793 13.4614 3.12793 22.0819 3.12793 30.7116C3.12793 31.8293 3.70507 32.3973 4.81356 32.3973C10.4659 32.3973 16.1274 32.3973 21.7798 32.3973C21.9355 32.3973 22.0821 32.3881 22.2378 32.3973C23.0073 32.4522 23.612 33.0843 23.612 33.8355C23.6211 34.5959 23.0257 35.2372 22.2561 35.2921C22.1187 35.3013 21.9813 35.3013 21.8439 35.3013C16.2007 35.3013 10.5667 35.3013 4.92349 35.3013C2.04693 35.3105 0.205566 33.4691 0.205566 30.5925C0.205566 26.3052 0.205566 22.027 0.205566 17.7396Z"
@@ -507,35 +507,21 @@ const AddPost: FC<postPropsinterface> = ({
                     </div>
                   </label>
                 )}
-                {/* {upImg && (
-                  <div>
-                    <div className="crop-container">
-                      <Cropper
-                        image={upImg}
-                        crop={crop}
-                        zoom={zoom}
-                        aspect={7 / 5}
-                        onCropChange={setCrop}
-                        onCropComplete={onCropComplete}
-                        onZoomChange={setZoom}
-                      />
-                    </div>
-                  </div>
-                )} */}
+
                 <input
                   id="upload_post"
                   type="file"
                   className="hidden"
                   accept="image/x-png,image/gif,image/jpeg,image/*"
                   onChange={(e: any) => {
-                    // if (e.target.files[0].name?.includes(".gif")) {
+                    
                     onUploadFile(e.target.files[0], "", []);
-                    // } else {
-                    //   onSelectFile(e);
-                    // }
+                    
+                    
+                    
                   }}
                 />
-                {/* {!upImg && ( */}
+
 
                 <div className="relative my-4 flex">
                   <MultipleSelect
@@ -546,7 +532,6 @@ const AddPost: FC<postPropsinterface> = ({
                     <p className="text-xs">{finalTags.length}/3</p>
                   </div>
                 </div>
-                {/* )} */}
 
                 <div className="lg:my-3">
                   <button
@@ -557,17 +542,17 @@ const AddPost: FC<postPropsinterface> = ({
                           if (uploadData || uploadDetails) {
                             addPost(uploadData, description, finalTags);
                             setLoading(true);
-                            // if (uploadData?.name?.includes(".gif")) {
-                            // } else {
-                            //   showCroppedImage(description, finalTags).then(
-                            //     (res: any) => {
-                            //       // if (res) {
-                            //       //   addPost(res);
-                            //       // }
-                            //       setLoading(true);
-                            //     }
-                            //   );
-                            // }
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                           } else {
                             notifyError({
                               message: "Please upload image first",

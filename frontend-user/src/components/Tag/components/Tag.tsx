@@ -46,11 +46,7 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
   return (
     <div
       className="w-full"
-      // className={`mt-2.5 flex  w-full  gap-2 ${
-      //   !tagPage
-      //     ? "h-14 overflow-x-auto md:h-full md:flex-wrap md:overflow-hidden"
-      //     : "h-full flex-wrap overflow-hidden"
-      // } `}
+      
     >
       {sorted?.length ? (
         <div>
@@ -77,18 +73,12 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
-              // loop={true}
-              // grabCursor={true}
-              // keyboard={{
-              //   enabled: true,
-              // }}
+              
               modules={[Autoplay]}
-              // slidesPerView={"auto"}
-              // centeredSlides={true}
+              
               spaceBetween={10}
               slidesPerView={"auto"}
-              // centeredSlides={true}
-              // spaceBetween={30}
+              }
               className="mySwiper"
             >
               <div
@@ -155,76 +145,7 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
         </div>
       )}
     </div>
-    // <div>
-    //   <div className="hidden sm:flex">
-    //     <div
-    //       className={`mt-2.5 flex  w-full  gap-2 ${
-    //         !tagPage
-    //           ? "h-14 overflow-x-auto md:h-full md:flex-wrap md:overflow-hidden"
-    //           : "h-full flex-wrap overflow-hidden"
-    //       } `}
-    //     >
-    //       {sorted?.length ? (
-    //         sorted?.map((item, index: number) => (
-    //           <>
-    //             <Tags hastag={item} key={item} />
-    //           </>
-    //         ))
-    //       ) : (
-    //         <div className=" mx-auto mt-5 flex justify-center pb-4 text-center text-xl font-medium text-primary-600">
-    //           No data found yet
-    //         </div>
-    //       )}
-    //     </div>
-    //   </div>
-    //   <div className="block sm:hidden">
-    //     <Swiper
-    //       style={{
-    //         width: "100%",
-    //       }}
-    //       autoplay={{
-    //         delay: 2500,
-    //         disableOnInteraction: false,
-    //       }}
-    //       loop={true}
-    //       grabCursor={true}
-    //       keyboard={{
-    //         enabled: true,
-    //       }}
-    //       modules={[Autoplay, Navigation]}
-    //       // slidesPerView={"auto"}
-    //       centeredSlides={true}
-    //       spaceBetween={30}
-    //     >
-    //       <div
-    //         className={`mt-2.5 flex  w-fit  gap-2 ${
-    //           !tagPage
-    //             ? "h-14 overflow-x-auto md:h-full md:flex-wrap md:overflow-hidden"
-    //             : "h-full flex-wrap overflow-hidden"
-    //         } `}
-    //       >
-    //         {sorted?.length ? (
-    //           sorted?.map((item, index: number) => (
-    //             <>
-    //               <SwiperSlide
-    //                 className="mySwiper-slide"
-    //                 style={{
-    //                   width: "fit-content",
-    //                 }}
-    //               >
-    //                 <Tags hastag={item} key={item} />
-    //               </SwiperSlide>
-    //             </>
-    //           ))
-    //         ) : (
-    //           <div className=" mx-auto mt-5 flex justify-center pb-4 text-center text-xl font-medium text-primary-600">
-    //             No data found yet
-    //           </div>
-    //         )}
-    //       </div>
-    //     </Swiper>
-    //   </div>
-    // </div>
+    >
   );
 };
 

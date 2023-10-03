@@ -42,7 +42,7 @@ const CommentCard = () => {
                     <div className="relative h-10 w-10 rounded-full  ">
                         <Image
                             src={userProfile}
-                            // style={{ borderRadius: "10px" }}
+
                             alt="userProfile"
                             layout='fill'
                             objectFit='cover'
