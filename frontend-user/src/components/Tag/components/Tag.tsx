@@ -46,7 +46,11 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
   return (
     <div
       className="w-full"
-      
+      // className={`mt-2.5 flex  w-full  gap-2 ${
+      //   !tagPage
+      //     ? "h-14 overflow-x-auto md:h-full md:flex-wrap md:overflow-hidden"
+      //     : "h-full flex-wrap overflow-hidden"
+      // } `}
     >
       {sorted?.length ? (
         <div>
@@ -73,12 +77,18 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
-              
+              // loop={true}
+              // grabCursor={true}
+              // keyboard={{
+              //   enabled: true,
+              // }}
               modules={[Autoplay]}
-              
+              // slidesPerView={"auto"}
+              // centeredSlides={true}
               spaceBetween={10}
               slidesPerView={"auto"}
-              }
+              // centeredSlides={true}
+              // spaceBetween={30}
               className="mySwiper"
             >
               <div
@@ -87,11 +97,9 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
                 } `}
               >
                 {sorted?.map((item, index: number) => (
-                  <Link
-                    key={item}
-                    href={`/search?tab=all&&search_query=${item}`}
-                  >
+                 
                     <SwiperSlide
+                    key={item}
                       style={{
                         width: "auto",
                       }}
@@ -103,32 +111,30 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
                       <button
                         className="border-slate rounded-full border-2 bg-[#DCDDE2] px-3 py-1 text-[14px]  font-[500]	 text-[#858585]"
                         onClick={() => {
-                          console.log("this is good");
-                          setLoading(true);
-                          router.push(`/search?tab=all&&search_query=${item}`);
+                         
                         }}
                       >
                         <p className="">#{item}</p>
                       </button>
                     </SwiperSlide>
-                  </Link>
+                 
                 ))}
                 {sortedTags?.length > 0 && (
-                  <Link href={"/tags"}>
+                  
                     <SwiperSlide
                       style={{
                         width: "auto",
                       }}
                     >
                       <div className="mt-1  md:flex">
-                        <Link href={"/tags"} className="cursor-pointer">
+                       
                           <p className="items-center pr-4 text-center text-[16px] text-[#FF5E34]  ">
                             See all tags
                           </p>
-                        </Link>
+                    
                       </div>
                     </SwiperSlide>
-                  </Link>
+              
                 )}
               </div>
             </Swiper>
@@ -145,7 +151,76 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
         </div>
       )}
     </div>
-    >
+    // <div>
+    //   <div className="hidden sm:flex">
+    //     <div
+    //       className={`mt-2.5 flex  w-full  gap-2 ${
+    //         !tagPage
+    //           ? "h-14 overflow-x-auto md:h-full md:flex-wrap md:overflow-hidden"
+    //           : "h-full flex-wrap overflow-hidden"
+    //       } `}
+    //     >
+    //       {sorted?.length ? (
+    //         sorted?.map((item, index: number) => (
+    //           <>
+    //             <Tags hastag={item} key={item} />
+    //           </>
+    //         ))
+    //       ) : (
+    //         <div className=" mx-auto mt-5 flex justify-center pb-4 text-center text-xl font-medium text-primary-600">
+    //           No data found yet
+    //         </div>
+    //       )}
+    //     </div>
+    //   </div>
+    //   <div className="block sm:hidden">
+    //     <Swiper
+    //       style={{
+    //         width: "100%",
+    //       }}
+    //       autoplay={{
+    //         delay: 2500,
+    //         disableOnInteraction: false,
+    //       }}
+    //       loop={true}
+    //       grabCursor={true}
+    //       keyboard={{
+    //         enabled: true,
+    //       }}
+    //       modules={[Autoplay, Navigation]}
+    //       // slidesPerView={"auto"}
+    //       centeredSlides={true}
+    //       spaceBetween={30}
+    //     >
+    //       <div
+    //         className={`mt-2.5 flex  w-fit  gap-2 ${
+    //           !tagPage
+    //             ? "h-14 overflow-x-auto md:h-full md:flex-wrap md:overflow-hidden"
+    //             : "h-full flex-wrap overflow-hidden"
+    //         } `}
+    //       >
+    //         {sorted?.length ? (
+    //           sorted?.map((item, index: number) => (
+    //             <>
+    //               <SwiperSlide
+    //                 className="mySwiper-slide"
+    //                 style={{
+    //                   width: "fit-content",
+    //                 }}
+    //               >
+    //                 <Tags hastag={item} key={item} />
+    //               </SwiperSlide>
+    //             </>
+    //           ))
+    //         ) : (
+    //           <div className=" mx-auto mt-5 flex justify-center pb-4 text-center text-xl font-medium text-primary-600">
+    //             No data found yet
+    //           </div>
+    //         )}
+    //       </div>
+    //     </Swiper>
+    //   </div>
+    // </div>
   );
 };
 
