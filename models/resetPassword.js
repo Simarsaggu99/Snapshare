@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-// create a schema
+
 var resetPasswordSchema = new Schema(
   {
     otp: { type: String, required: true },
