@@ -13,5 +13,5 @@ const addFolderSchema = new Schema(
 // we need to create a model using it
 const FolderModel = mongoose.model("folder", addFolderSchema, "folder");
 
-// make this available to our users in our Node applications
+//  make this available to our users in our Node applications
 module.exports = FolderModel;
