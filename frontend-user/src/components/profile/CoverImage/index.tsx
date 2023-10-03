@@ -85,12 +85,12 @@ const CoverImage = ({
           (blobFile) =>
             new File([blobFile], coverImage?.name, { type: "image/png" })
         );
-      // setUploadData(undefined);
+      
       const newFile = await onUploadCover(file);
 
       return newFile;
     } catch (e) {
-      // notifyError({ message: "opps something went wrong" });
+      
     }
   }, [croppedAreaPixels]);
   return (
@@ -102,7 +102,8 @@ const CoverImage = ({
           {upImg ? (
             <div
               className="h-full w-full"
-              // className="relative top-0 h-[106px] w-[100%] md:mx-auto md:h-[222px]   md:w-[90%] xl:h-[400px]"
+              
+
             >
               <div className="cover-crop-container  h-full">
                 <Cropper
@@ -195,7 +196,7 @@ const CoverImage = ({
       ) : (
         <div
           className="h-full w-full"
-          // className="relative top-0 my-auto flex h-[126px]  w-[100%] justify-center bg-gray-200 md:mx-auto md:h-[244px] md:w-[90%] xl:h-[512px]"
+          
         >
           {/* this is a part where image is not update yet */}
           {upImg ? (
@@ -226,7 +227,7 @@ const CoverImage = ({
           )}
 
           {currentUser?.data?._id === getSingleUser?.data?.data?._id && (
-            // <label htmlFor="cover_img">
+            
             <div className="absolute bottom-2 right-2   ">
               {upImg ? (
                 <div className="flex gap-2">

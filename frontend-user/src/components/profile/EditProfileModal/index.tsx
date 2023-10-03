@@ -149,11 +149,7 @@ const EditProfileModal = ({
               });
             getPosts.refetch();
             getSingleUser.refetch();
-            // setTimeout(() => {
-            //   if (typeof window !== "undefined") {
-            //     window.location.reload();
-            //   }
-            // }, 700);
+            
           }
         });
     }
@@ -244,7 +240,7 @@ const EditProfileModal = ({
                     className="rounded-full"
                     alt="profile"
                     objectFit="cover"
-                    // layout="fill"
+                    
                   />
                 </div>
               </div>

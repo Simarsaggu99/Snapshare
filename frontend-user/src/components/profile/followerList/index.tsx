@@ -45,9 +45,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
   const dataFetchedRef = useRef(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  // const usersFollowers: any = useGetUserFollower({
-  //   pathParams: { userId },
-  // });
+  
   const removeFollower = useRemoveFollower();
   console.log(isLoading, "this is good");
   useEffect(() => {
@@ -140,7 +138,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
               id="scrollableDiv"
               style={{
                 overflow: "auto",
-                // minHeight: "300px",
+                
                 height: "450px",
                 background: "white",
                 borderRadius: "10px",
@@ -165,7 +163,7 @@ const FollowerList = ({ type, getSingleUser }: FollowerProps) => {
                     <p>Loading...</p>
                   </h4>
                 }
-                // inverse={true}
+                
                 scrollableTarget="scrollableDiv"
               >
                 {followerList?.map((item: any) => (
