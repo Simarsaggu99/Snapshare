@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-// create a schema
+
 const roleSchema = new Schema(
   {
     name: { type: String, required: true },
