@@ -89,9 +89,7 @@ const CustomDatepicker = () => {
     }
   };
 
-  // if(selectedDate?.month % 2 === 0){
-  //   return 30;
-  // }
+  
   for (var date = 1; date <= checkMonthlyDates(); date++) {
     dates.push(date);
   }
@@ -150,10 +148,7 @@ const CustomDatepicker = () => {
       )}
       {dropDown === "date" && (
         <div className=" mt- top-8 left-1 flex w-full cursor-pointer     justify-start rounded-lg bg-gray-100">
-          {/* <div className="flex flex-col"> */}
-          {/* <div className="title mx-auto w-min rounded-xl bg-white px-4 py-1 text-2xl">
-              {selectedDate?.monthI}
-            </div> */}
+         
           <div className="dates mx-auto h-48  w-full  overflow-y-scroll p-2">
             {dates?.map((e) => (
               <div
@@ -168,29 +163,10 @@ const CustomDatepicker = () => {
               </div>
             ))}
           </div>
-          {/* <div className="dates mx-auto grid w-48 grid-cols-7 ">
-              {dates?.map((e) => (
-                <div
-                  key={e}
-                  className="mx-auto hover:rounded-lg hover:bg-white hover:text-orange-500 "
-                  onClick={() => {
-                    setSelectedDate({ ...selectedDate, date: e });
-                    setDropDown(false);
-                  }}
-                >
-                  {e}
-                </div>
-              ))}
-            </div> */}
-          {/* </div> */}
+          
         </div>
       )}
-      {/* <div>
-        {selectedDate?.year}
-        {selectedDate?.month}
-
-        {selectedDate?.date}
-      </div> */}
+      
     </div>
   );
 };

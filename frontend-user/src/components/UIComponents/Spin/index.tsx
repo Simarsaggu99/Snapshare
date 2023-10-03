@@ -25,6 +25,7 @@ const Spin = ({ dotSize, color, size }: any) => {
               dotSize ? dotSize : "h-[14px] w-[14px]"
             }`}
           ></i>
+          
           <i
             className={`ant-spin-dot-item bg-${bgColor} ${
               dotSize ? dotSize : "h-[14px] w-[14px]"

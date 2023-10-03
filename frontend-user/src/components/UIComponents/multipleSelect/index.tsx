@@ -9,7 +9,7 @@ const MultipleSelect = ({ finalTags, setFinalTags }: tagprops) => {
   const removeTag = (index: number) => {
     setFinalTags(finalTags?.filter((_: any, i: number) => i != index));
   };
-  // const removespecialChar = /[#]/;
+  
   let spaceRemove = /\s/g;
   let removespecialChar = /[`~!#$%^&*@()|+=-?-;:'",<>_\{\}\[\]\\\/]/gi;
   return (
