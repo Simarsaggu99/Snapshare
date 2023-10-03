@@ -299,7 +299,7 @@ const Header = () => {
                     onChange={(e) => {
                       setSearchInput(e.target.value);
  }
-                    }}
+                    }
                   />
                   <button
                     onClick={() => {
@@ -630,7 +630,7 @@ const Header = () => {
                   onKeyDown={handleKey}
                   onChange={(e) => {
                     setSearchInput(e.target.value);
-
+                  }}
                 />
                 <button
                   onClick={() => {
