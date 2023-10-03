@@ -14,7 +14,7 @@ import { Trending } from "@/utils/AppIcons";
 
 const Sidebar = ({ search }: any) => {
   const [viewSize, setViewSize] = useState(10);
-  // const [isModel, setIsModel] = useAtom(isLoginModal);
+  
   const [currentUser] = useAtom(loggedInUser);
 
   const { data: getTags }: any = useGetTags({
@@ -58,23 +58,7 @@ const Sidebar = ({ search }: any) => {
           </div>
         </div>
 
-        {/* <div className=" flex  overflow-hidden rounded-lg bg-[#fff]  shadow-md  ">
-          <p className="  flex items-center   bg-primary-200 px-2 py-0.5 font-medium  text-primary-600 ">
-            <Trending />
-          </p>
-          <div className=" overflow-hidden py-1.5">
-            <Tag getTags={getTags} tagPage={false} />
-          </div>
-        </div>
-        <div className="mt-1 hidden justify-end md:flex">
-          <Link href={"/tags"}>
-            <button className="cursor-pointer">
-              <p className="items-center text-center text-[16px] text-[#FF5E34]  ">
-                See all
-              </p>
-            </button>
-          </Link>
-        </div> */}
+        
       </div>
     </div>
   );

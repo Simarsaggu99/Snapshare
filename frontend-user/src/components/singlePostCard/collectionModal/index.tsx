@@ -127,6 +127,7 @@ const CollectionModal = ({
                   onClick={() => {
                     setIsInputShow(true);
                   }}
+                  
                 >
                   <div>
                     <div className="flex justify-center ">

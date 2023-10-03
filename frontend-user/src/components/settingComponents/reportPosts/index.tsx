@@ -4,7 +4,7 @@ import { useGetReportedPost } from "@/hooks/post/query";
 import { useRouter } from "next/router";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-// import LocalizedFormat from "dayjs/plugin/LocalizedFormat";
+
 import dayjs from "dayjs";
 import { useAtom } from "jotai";
 import { loggedInUser } from "@/store";
@@ -34,17 +34,14 @@ const ReportPosts = () => {
     query: { userId: currentUser?.data?._id },
   });
 
-  // console.log(
-  //   "singleUserWarning :>> ",
-  //   singleUserWarning?.data?.data?.getWarningsList
-  // );
+  
   console.log(
     "singleUserSpankee :>> ",
     singleUserSpankee?.data?.data?.getSpankeeList
   );
 
   dayjs.extend(relativeTime);
-  // dayjs.extend(LocalizedFormat);
+  
 
   console.log("currentUser", currentUser);
   const obj = {
@@ -92,7 +89,7 @@ const ReportPosts = () => {
             NOTE: {obj.note}
           </div>
         </div>
-        {/* have to show spankees here */}
+        
         {showSpankee ? (
           singleUserSpankee?.data?.data?.getSpankeeList?.[0] ? (
             <div className="mx-2 mt-4">
@@ -144,7 +141,7 @@ const ReportPosts = () => {
                         key={value?._id}
                         className="my-2  flex justify-between"
                       >
-                        {/* <div className="">{idx + 1}</div> */}
+                        
                         <div className="text md:text-lg">
                           <span className="mr-1 rounded-md border bg-[#FFCFC2] px-2 text-[#FF5E34]">
                             {idx + 1}
@@ -162,7 +159,7 @@ const ReportPosts = () => {
                         key={val?._id}
                         className="my-2  flex justify-between"
                       >
-                        {/* <div className="">{idx + 1}</div> */}
+                       
                         <div className="text md:text-lg">
                           <span className="mr-1 rounded-md border bg-[#FFCFC2] px-2 text-[#FF5E34]">
                             {idx + 1}
@@ -209,18 +206,7 @@ const ReportPosts = () => {
           >
             Reports and Warnings
           </button>
-          {/* <button
-            onClick={() => {
-              setTabs("Followers");
-            }}
-            className={`my-3 px-2.5 ${
-              tabs === "Followers"
-                ? "border-b-2 border-primary-600  text-primary-600"
-                : "pb-0.5"
-            }`}
-          >
-            My reported post
-          </button> */}
+         
         </div>
         <div className=" my-4 mt-6 rounded-md border px-4 pt-4">
           {" "}

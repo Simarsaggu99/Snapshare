@@ -173,7 +173,7 @@ const NotificationSetting = () => {
         <div style={{ position: "relative" }} className="w-full">
           <Toaster
             containerClassName="mt-[50px] md:mt-[53px] xl:mt-[60px]"
-            // containerStyle={{ marginTop: "50px" }}
+           
             position="top-center"
             toastOptions={{
               duration: 1000,

@@ -42,7 +42,7 @@ const BlockUserList = () => {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              // alignItems: " flex-end",
+              
               flexWrap: "wrap",
               gap: "5px",
             }}

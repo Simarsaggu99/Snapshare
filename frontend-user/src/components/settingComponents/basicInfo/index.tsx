@@ -70,24 +70,16 @@ const BasicInfo = () => {
         }
       });
   };
-  // console.log('newdate', newdate)
+  
 
   const currentDate = dayjs().format("YYYY-MM-DD");
   const matchDate = dayjs(currentDate)
     .subtract(13, "year")
     .format("YYYY-MM-DD");
-  // const handleDateChange=(e:any)=>{
-  //   const validDob=dayjs().subtract(13, 'year').format("YYYY-MM-DD")
-  //   console.log('validDob', validDob,e.target.value)
-  //   if(validDob>e.target.value){
-  //     console.log("yes")
-  //   }else{
-  //     notifyError({ message: "Age should be greater than 13" });
-  //   }
-  // }
+  
   return (
     <div>
-      {/* <Toaster /> */}
+      
 
       <div className="my-2 px-4">
         <div className="border-b-2 pb-5 ">
@@ -117,8 +109,8 @@ const BasicInfo = () => {
                     message: "Age should be greater than 13 years",
                     status: true,
                   });
-                  // // return "Age should be greater than 13";
-                  // notifyError({ message: "Age should be greater than 13" });
+                 
+                  
                 }
               }}
               value={userDataDetials?.dob}
@@ -130,7 +122,7 @@ const BasicInfo = () => {
             <p className="text-sm text-red-600">
               {dobError?.status && dobError?.message}
             </p>
-            {/* <CustomDatePicker /> */}
+            
           </div>
           <div>
             <p>Gender</p>
@@ -155,19 +147,7 @@ const BasicInfo = () => {
           </div>
           <div>
             <p>country</p>
-            {/* <input
-              onChange={(e) => {
-                const { name, value } = e.target;
-                setUserDataDetials({
-                  ...userDataDetials,
-                  [name]: value,
-                });
-              }}
-              value={userDataDetials?.country}
-              className="mt-3 w-full  rounded-lg border border-gray-300 focus:outline-none focus:ring-0"
-              type="text"
-              name="country"
-            /> */}
+            
             <select
               className="w-full rounded-[10px] border border-gray-300"
               name="country"
@@ -180,7 +160,7 @@ const BasicInfo = () => {
                   [name]: value,
                 });
               }}
-              // className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              
             >
               <option className="hidden">Select country</option>
               {getCountry?.data?.result?.map((item: any, id: any) => (
@@ -211,7 +191,7 @@ const BasicInfo = () => {
       <div style={{ position: "relative" }}>
         <Toaster
           containerClassName="mt-[55px]"
-          // containerStyle={{ position: "absolute", top: "-400px" }}
+          
           position="top-center"
           toastOptions={{
             duration: 2000,
