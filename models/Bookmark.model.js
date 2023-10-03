@@ -12,5 +12,5 @@ const bookmarkSchema = new Schema(
 
 const Bookmark = model("Bookmark", bookmarkSchema, "bookmark");
 
-// make this available to our users in our Node applications
+//  make this available to our users in our Node applications
 module.exports = Bookmark;
