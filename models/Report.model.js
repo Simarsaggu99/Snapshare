@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const rePortSchema = new Schema(
   {
     post_id: {
