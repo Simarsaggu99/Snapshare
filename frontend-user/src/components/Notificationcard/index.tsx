@@ -130,7 +130,7 @@ const Notificationcard = ({ setOpen }: notificationProps) => {
                           height={50}
                           style={{ borderRadius: "100%" }}
                           alt={"profile"}
-                          // layout="fill"
+                          
                           objectFit="cover"
                         />
                       </div>
@@ -140,15 +140,7 @@ const Notificationcard = ({ setOpen }: notificationProps) => {
                       </div>
                     )}
                   </Link>
-                  {/* <Link
-                href={`${
-                  item?.verb === "Like" || item?.verb === "comment"
-                    ? `/open-post?id=${item?.subject}`
-                    : item?.verb === "new-message"
-                    ? `/messages/${item?.receiver}?tab=All`
-                    : `/profile/${item?.actor}`
-                }`}
-              > */}
+                  {}
                   <div
                     className="flex w-full cursor-pointer justify-between gap-4 pt-2 text-sm"
                     onClick={() => {
@@ -162,30 +154,11 @@ const Notificationcard = ({ setOpen }: notificationProps) => {
                               `/messages/${res?.data?.conversation_id}?tab=All`
                             );
                           }
-                          // else if (!res?.data?.exists) {
-                          //   createConversation({
-                          //     body: {
-                          //       usersList: [user?._id, currentUser?.data?._id],
-                          //       type: "single",
-                          //     },
-                          //   }).then((res: any) => {
-                          //     router.push(`/messages/${res?.data?._id}`);
-                          //   });
-                          // }
+                          
                         });
                       } else {
                         routing(item);
-                        // router.push(
-                        //   `${
-                        //     item?.verb === "Like" ||
-                        //     item?.verb === "comment" ||
-                        //     item?.verb === "restore-post"
-                        //       ? `/open-post?id=${item?.subject}`
-                        //       : item?.verb === "new-message"
-                        //       ? `/messages/${item?.receiver}?tab=All`
-                        //       : `/profile/${item?.actor}`
-                        //   }`
-                        // );
+                        
                       }
                       setOpen({ notify: false });
                       markSingleNotificationRead
@@ -198,15 +171,7 @@ const Notificationcard = ({ setOpen }: notificationProps) => {
                               ? Number(notificationsCounts) - 1
                               : 0
                           );
-                          // setCurrentUser({
-                          //   ...currentUser,
-                          //   data: {
-                          //     ...currentUser.data,
-                          //     notificationCount:
-                          //       currentUser?.data?.notificationCount > 0 &&
-                          //       currentUser?.data?.notificationCount - 1,
-                          //   },
-                          // });
+                          
                         });
                     }}
                   >

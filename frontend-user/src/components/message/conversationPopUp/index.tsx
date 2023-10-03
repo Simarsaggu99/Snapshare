@@ -40,7 +40,7 @@ const ConversaionPopUp = ({
       <div
         className="flex  justify-between gap-2 border-b bg-white py-5 last:border-none"
         onClick={() => {
-          //   handleConversation(member?.[0]);
+          
         }}
       >
         <div className="">
@@ -79,7 +79,7 @@ const ConversaionPopUp = ({
       </div>
     );
   };
-  //   ClosePopUp();
+  
   return (
     <div
       style={{ maxHeight: "37rem" }}

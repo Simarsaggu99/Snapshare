@@ -44,7 +44,7 @@ const ConversationList = () => {
       }, 200);
     };
   }, [conversationId]);
-  // const user: any = useGetUserForConversation({});
+  
 
   const handleConversation = (user: any) => {
     checkIfConversationExists({
@@ -53,7 +53,7 @@ const ConversationList = () => {
     }).then((res: any) => {
       if (res?.data?.exists) {
         router.push(`/messages/${res?.data?.conversation_id}?tab=${tabName}`);
-        // conversationUserList.refetch();
+        
       } else if (!res?.data?.exists) {
         createConversation({
           body: {
@@ -62,7 +62,7 @@ const ConversationList = () => {
           },
         }).then((res: any) => {
           router.push(`/messages/${res?.data?._id}`);
-          // conversationUserList.refetch();
+          
         });
       }
     });
@@ -91,8 +91,8 @@ const ConversationList = () => {
                   className="rounded-full"
                   src={member?.avatar_url}
                   alt="profile"
-                  // height={64}
-                  // width={64}
+                  
+              
                   layout="fill"
                   objectFit="cover"
                 />
@@ -175,9 +175,7 @@ const ConversationList = () => {
         </div>
         <div
           className="absolute bottom-5 w-full  "
-          // onBlur={() => {
-          //   setUserList([]);
-          // }}
+          
         >
           {/* {isSearchPopUp && ( */}
           <div
@@ -199,8 +197,8 @@ const ConversationList = () => {
                         <Image
                           className="rounded-full"
                           src={item?.avatar_url}
-                          // height="40"
-                          // width=" 40"
+                          
+                          
                           layout="fill"
                           alt="Profile"
                         />

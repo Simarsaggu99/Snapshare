@@ -38,11 +38,7 @@ const UserData = ({ handle, user }: any) => {
       img: profile,
     },
   ];
-  // const user: any = useGetSingleUser({
-  //   pathParams: {
-  //     id: handle?._id,
-  //   },
-  // });
+  
   const unblockUser = useUnblockUser();
   const blockUser = useBlockUser();
   const unfollowUser = useUnfollowUser();
