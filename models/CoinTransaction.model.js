@@ -8,29 +8,29 @@ const coinTransactionSchema = new Schema(
       ref: "user",
     },
     receiver: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: "user",
-      },
-     type: {
-        type: String,
-        required: true,
-        enum: ["gift", "chat"],
-        default: "gift",
-      },
-      post: {
-        type: Schema.Types.ObjectId,
-      },
-      conversation: {
-        type: Schema.Types.ObjectId,
-      },
-      coins: { type: Number, default: 0 },
-      commissionRate: 
-      { 
-        type: Number,
-        required: true,
-         default: 0 ,
-        },  
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: "user",
+    },
+    type: {
+      type: String,
+      required: true,
+      enum: ["gift", "chat"],
+      default: "gift",
+    },
+    post: {
+      type: Schema.Types.ObjectId,
+    },
+    conversation: {
+      type: Schema.Types.ObjectId,
+    },
+    coins: { type: Number, default: 0 },
+    commissionRate:
+    {
+      type: Number,
+      required: true,
+      default: 0,
+    },
   },
   {
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },

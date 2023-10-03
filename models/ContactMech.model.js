@@ -22,5 +22,5 @@ const contactMechSchema = new Schema(
 
 const ContactMech = model("ContactMech", contactMechSchema, "contactmech");
 
-// make this available to our users in our Node applications
+//   make this available to our users in our Node applications
 module.exports = ContactMech;
