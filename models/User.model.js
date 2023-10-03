@@ -3,7 +3,6 @@ const dayjs = require("dayjs");
 
 const userSchema = new Schema(
   {
-    //name: { type: String, required: true },
     OAuth: {
         type: String,
         unique: true,
