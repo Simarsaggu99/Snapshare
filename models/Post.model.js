@@ -1,6 +1,6 @@
 const dayjs = require("dayjs");
 const { Schema, model } = require("mongoose");
-// create a schema
+
 const postSchema = new Schema(
   {
     description: { type: String },
