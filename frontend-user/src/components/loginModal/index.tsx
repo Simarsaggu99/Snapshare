@@ -17,7 +17,7 @@ const LoginModal = () => {
   return (
     <div>
       <div>
-        {}
+       
         <Modal
           isVisiable={isModel}
           onClose={setIsModel}
@@ -60,10 +60,7 @@ const LoginModal = () => {
               <div className="border-3 mx-atuo my-5   rounded-md  border  text-lg text-white">
                 <button
                   className="flex w-full justify-center"
-                  // onClick={() => {
-                  //   // setUserModal(true);
-                  //   setGoogleLoginState(true);
-                  // }}
+
                   onClick={async (e) => {
                     e.preventDefault();
                     if (!router.query.userId) {
@@ -75,9 +72,6 @@ const LoginModal = () => {
                       );
                     }).then(() => { });
 
-                    // setIsModel(false);
-
-                    // googleLogin();
                   }}
                 >
                   <div className="mt-2 flex   pr-4 ">
@@ -121,10 +115,7 @@ const LoginModal = () => {
               </p>
             </div>
           </div>
-          {/*
-            </div>
-          </div>
-        )} */}
+
         </Modal>
       </div>
     </div>
