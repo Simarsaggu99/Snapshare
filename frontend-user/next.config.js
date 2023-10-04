@@ -5,6 +5,7 @@ module.exports = {
   },
   images: {
     domains: [
+      "memesakeawsbucket.s3.ap-south-1.amazonaws.com"
     ],
   },
 
