@@ -17,7 +17,7 @@ const Settings = () => {
   const settingArray = [
     { name: "Basic info", tab: "Basic-info", icon: <UserIcon />, id: 1 },
     { name: "Account Settings", tab: "Account-Settings", icon: "", id: 2 },
-    { name: "Redeem Settings", tab: "Redeem-Settings", icon: "", id: 3 },
+   
     {
       name: "Notification Settings",
       tab: "Notification-Settings",
@@ -25,12 +25,7 @@ const Settings = () => {
       id: 4,
     },
     { name: "Blocked Users", tab: "Blocked-Users", icon: <BlockIcon />, id: 5 },
-    {
-      name: "Reports and Warnings",
-      tab: "Reports-and-Warnings",
-      icon: <ReportIcon />,
-      id: 6,
-    },
+   
   ];
   useEffect(() => {
     setActiveLink(tab);
@@ -114,7 +109,7 @@ const Settings = () => {
           </div>
           <div className=" hidden     justify-start  lg:flex">
             {/* <div className="w-[80%]"> */}
-            <Advertisement />
+            {/* <Advertisement /> */}
             {/* </div> */}
           </div>
         </div>

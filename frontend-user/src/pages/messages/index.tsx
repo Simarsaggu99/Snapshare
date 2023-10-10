@@ -17,9 +17,9 @@ const Message = () => {
       </div>
       <div className="flex justify-start md:w-[70%] lg:w-[64%]  ">
         <div className="border   xxxs:hidden xxxs:w-[100%] md:block md:h-[84vh] lg:h-[92vh] lg:w-[100%] 2xl:w-[83%]">
-          <div className="mt-[12rem] flex justify-center ">
+          {/* <div className="mt-[12rem] flex justify-center ">
             <Image src={messageImg} alt="memsake" className="" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

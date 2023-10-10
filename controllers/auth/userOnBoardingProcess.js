@@ -74,7 +74,7 @@ const updateOnBoarding = async (req, res, next) => {
       userId: ObjectId(decryptedUserId),
     });
     const createFolder = new folderModel({
-      folder_name: "dafault folder",
+      folder_name: "default folder",
       user: decryptedUserId.toString(),
     });
     await createFolder.save();

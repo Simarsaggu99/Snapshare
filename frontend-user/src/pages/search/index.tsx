@@ -19,9 +19,9 @@ const Search = () => {
           <div className="searchData mt-8">
             <SearchData />
           </div>
-          <div className="mt-8 ml-8 hidden lg:block">
+          {/* <div className="mt-8 ml-8 hidden lg:block">
             <Advertisement />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

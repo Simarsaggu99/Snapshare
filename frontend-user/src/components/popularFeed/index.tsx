@@ -13,7 +13,7 @@ import Link from "next/link";
 import { useAtom } from "jotai";
 import { isLoginModal, loggedInUser } from "@/store";
 import { useRouter } from "next/router";
-// import "./styles.swiper.css";
+
 
 SwiperCore.use([Navigation, Pagination, A11y]);
 
@@ -48,23 +48,12 @@ const PopularFeed = () => {
         <p className="relative top-[2px] mb-2 w-full rounded-md bg-[#FFCFC2] py-[4.5px] text-center text-lg font-[500] text-alpha-primary">
           TOP 10
         </p>
-        {/* <div className="my-2 flex justify-end text-[15px] text-[#FF5E34] ">
-          <Link href={`/popular_post`}>
-            <p
-              className="mr-2 -mt-2  cursor-pointer"
-              // onClick={() => {
-              //   router.replace(`/popular_post`);
-              // }}
-            >
-              See all
-            </p>
-          </Link>
-        </div> */}
+        {}
 
         <Swiper
           style={
             {
-              // "--swiper-navigation-size": "1.5rem",
+              
             }
           }
           slidesPerView={1}
@@ -118,7 +107,7 @@ const PopularFeed = () => {
           }}
           modules={[Autoplay, Navigation]}
         >
-          {/* <div className="swiper-button-disabled hidden "></div> */}
+          
           <div
             ref={navigationNextRef}
             className="swiper-button-next select-none rounded-md shadow-md"
@@ -127,7 +116,7 @@ const PopularFeed = () => {
               backgroundColor: "white",
               marginRight: "3px",
 
-              // borderRadius: "10px",
+              
             }}
           >
             <Image src={RigthArrow} height={10} width={10} alt="Snapshare" />
@@ -145,7 +134,7 @@ const PopularFeed = () => {
           {getAllPost?.data?.data?.Posts?.map((item: any, idx: number) => {
             return (
               <SwiperSlide key={item?._id}>
-                {/* <Link href={`open-post?id=${item?._id}`}> */}
+               
                 <div
                   className="relative mx-1  flex cursor-pointer justify-center"
                   onClick={() => {
@@ -157,7 +146,7 @@ const PopularFeed = () => {
                     src={item?.media?.url}
                     style={{ borderRadius: "10px" }}
                     alt="feedImg"
-                    // layout="fill"
+                    
                     objectFit="cover"
                     unoptimized={true}
                     height={"124px"}

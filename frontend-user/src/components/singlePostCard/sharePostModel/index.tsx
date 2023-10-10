@@ -50,7 +50,7 @@ const SharePostModel = ({ sharePostProps }: any) => {
     setTimeout(() => {
       setIsTextCopied(false);
     }, 3000);
-    // toast.success('link copied successfully')
+    
   };
   const onHandleRepost = async () => {
     if (checkTodayPostCount?.data?.postCount <= 0) {
@@ -123,31 +123,7 @@ const SharePostModel = ({ sharePostProps }: any) => {
                     <FaceBookIcon />
                     <span className="">FaceBook</span>
                   </div>
-                  {/* <div
-                  className="fb-share-button"
-                  data-href={singlePostDetails?.media?.url}
-                  data-layout="button_count"
-                  data-size="small"
-                >
-                  <a
-                    target="_blank"
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${singlePostDetails?.media?.url}%2F&amp;src=${singlePostDetails?.media?.url}`}
-                    className="fb-xfbml-parse-ignore"
-                    rel="noreferrer"
-                  >
-                    Share
-                  </a>
-                  <iframe
-                    src={`https://www.facebook.com/plugins/share_button.php?href=${singlePostDetails?.media?.url}%2F&layout=button&size=small&width=67&height=20&appId`}
-                    width="67"
-                    height="20"
-                    style={{ border: "none", overflow: "hidden" }}
-                    scrolling="no"
-                    frameBorder={0}
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  ></iframe>
-                </div> */}
+                  
                 </Link>
               </button>
               <button className=" rounded-md border border-[#D9D9D9] bg-white py-2.5 text-[#858585] lg:px-10">
@@ -233,7 +209,7 @@ const SharePostModel = ({ sharePostProps }: any) => {
                           setIsModel(true);
                         }
                       }
-                      // onHandleRepost();
+                      
                     }}
                     className={` hidden w-max rounded-md  border border-[#D9D9D9] bg-white ${
                       createPost?.isLoading ? "pb-0 pt-2" : "py-2.5"
@@ -280,7 +256,7 @@ const SharePostModel = ({ sharePostProps }: any) => {
                   </div>
                 ) : (
                   <span
-                    // onClick={copyToClipboard}
+                    
                     className="mt-7 "
                   >
                     <FaRegCopy onClick={copyToClipboard} />

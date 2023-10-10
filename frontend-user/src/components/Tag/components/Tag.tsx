@@ -97,11 +97,9 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
                 } `}
               >
                 {sorted?.map((item, index: number) => (
-                  <Link
-                    key={item}
-                    href={`/search?tab=all&&search_query=${item}`}
-                  >
+                 
                     <SwiperSlide
+                    key={item}
                       style={{
                         width: "auto",
                       }}
@@ -113,32 +111,30 @@ const Tag = ({ getTags, tagPage }: allTagInterface) => {
                       <button
                         className="border-slate rounded-full border-2 bg-[#DCDDE2] px-3 py-1 text-[14px]  font-[500]	 text-[#858585]"
                         onClick={() => {
-                          console.log("this is good");
-                          setLoading(true);
-                          router.push(`/search?tab=all&&search_query=${item}`);
+                         
                         }}
                       >
                         <p className="">#{item}</p>
                       </button>
                     </SwiperSlide>
-                  </Link>
+                 
                 ))}
                 {sortedTags?.length > 0 && (
-                  <Link href={"/tags"}>
+                  
                     <SwiperSlide
                       style={{
                         width: "auto",
                       }}
                     >
                       <div className="mt-1  md:flex">
-                        <Link href={"/tags"} className="cursor-pointer">
+                       
                           <p className="items-center pr-4 text-center text-[16px] text-[#FF5E34]  ">
                             See all tags
                           </p>
-                        </Link>
+                    
                       </div>
                     </SwiperSlide>
-                  </Link>
+              
                 )}
               </div>
             </Swiper>

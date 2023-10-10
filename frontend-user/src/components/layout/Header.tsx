@@ -100,16 +100,11 @@ const Header = () => {
           setSearchInput("");
         }
       });
-    // setIsSearchOpen(false);
-    // .catch((err) => {
-    //   console.log("err", err);
-    //   router.push("/");
-    // });
+
     return () => {
       setMenuPopUp(false);
     };
   }, []);
-  // This code use for hide scroll bar on open modal and pop up
   useEffect(() => {
     if (isMessagePopUp || open.notify || isAddPost) {
       document.body.style.overflow = "hidden";
@@ -162,7 +157,7 @@ const Header = () => {
       name: "Log out",
       icon: <LogoutIcon />,
       id: 5,
-      // link: "/",
+
       className: "",
     },
   ];
@@ -186,8 +181,7 @@ const Header = () => {
 
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
-      // then close the menu
+
       if (
         open &&
         reportCardRef.current &&
@@ -195,7 +189,7 @@ const Header = () => {
         !reportModalRef?.current?.contains(e.target)
       ) {
         setOpen({ notify: false });
-        // setIsActive(false)
+
       }
     };
     document.addEventListener("mousedown", checkIfClickedOutside);
@@ -210,8 +204,7 @@ const Header = () => {
   const logoutUser = async () => {
     await logOutUser().then(() => {
       setCurrentUser();
-      // location.reload();
-      // router.push("/");
+
     });
   };
 
@@ -244,8 +237,7 @@ const Header = () => {
     if (!isActive) {
       event.preventDefault();
     } else if (isActive && !event.target.closest(".input-holder")) {
-      // setIsActive(false);
-      // clear input
+
       container.querySelector(".search-input").value = "";
     }
     setIsActive(!isActive);
@@ -306,14 +298,8 @@ const Header = () => {
                     onKeyDown={handleKey}
                     onChange={(e) => {
                       setSearchInput(e.target.value);
-                      // if (e.target.value) {
-                      //   router.push(
-                      //     `/search?tab=all&&search_query=${e.target.value}`
-                      //   );
-                      // } else {
-                      //   router.push("/");
-                      // }
-                    }}
+ }
+                    }
                   />
                   <button
                     onClick={() => {
@@ -415,7 +401,7 @@ const Header = () => {
                     }/10`}</p>
                   </button>
                 </div>
-                {/* <div> */}
+
                 <div ref={reportModalRef} className="relative ">
                   <div ref={reportCardRef}>
                     <button
@@ -477,15 +463,14 @@ const Header = () => {
                     onClick={() => {
                       setMenuPopUp(!menuPopUp);
                     }}
-                    // className="relative  mx-4 rounded-full sm:mx-10 md:mx-0 lg:h-[46px] lg:w-[46px]"/
+
                     className={` mx-0 cursor-pointer    lg:mx-0 `}
                   >
                     {currentUserData?.avatar_url ? (
                       <div className="relative h-[45px] w-[45px] pt-2">
                         <Image
                           src={currentUserData?.avatar_url}
-                          // height={45}
-                          // width={45}
+
                           layout="fill"
                           className="shadow-md "
                           style={{ borderRadius: "50%" }}
@@ -539,7 +524,7 @@ const Header = () => {
                             </Link>
                             <label htmlFor="upload_profile">
                               <p className="cursor-pointer text-sm text-primary-600 ">
-                                {/* {currentUserData?.cruxAwardedMemeCoins} MC */}
+
                                 View profile
                               </p>
                             </label>
@@ -549,7 +534,7 @@ const Header = () => {
                               className="hidden"
                               accept="image/*"
                               onChange={(e: any) => {
-                                // onUploadFile(e);
+
                               }}
                             />
                           </div>
@@ -645,13 +630,6 @@ const Header = () => {
                   onKeyDown={handleKey}
                   onChange={(e) => {
                     setSearchInput(e.target.value);
-                    // if (e.target.value) {
-                    //   router.push(
-                    //     `/search?tab=all&&search_query=${e.target.value}`
-                    //   );
-                    // } else {
-                    //   router.push("/");
-                    // }
                   }}
                 />
                 <button

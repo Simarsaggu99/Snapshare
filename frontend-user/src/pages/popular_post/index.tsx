@@ -59,9 +59,9 @@ const PopularPosts = () => {
               )}
             </div>
 
-            <div className="mt-8  hidden md:block">
+            {/* <div className="mt-8  hidden md:block">
               <Advertisement />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

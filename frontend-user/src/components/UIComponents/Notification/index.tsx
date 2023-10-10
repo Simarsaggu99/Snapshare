@@ -23,7 +23,7 @@ export const notifySuccess = ({ message }: any) => {
     autoClose: 2000,
 
     hideProgressBar: false,
-    // newestOnTop: false,
+    
     closeOnClick: true,
     rtl: false,
     pauseOnFocusLoss: true,
@@ -39,8 +39,9 @@ export const notifyWarning = ({ message }: any) => {
     position: "top-right",
     autoClose: 2000,
     hideProgressBar: false,
-    // newestOnTop: false,
+    
     closeOnClick: true,
+    
     rtl: false,
     pauseOnFocusLoss: true,
     draggable: true,

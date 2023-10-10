@@ -20,6 +20,7 @@ const AutoComplete = (props: any) => {
               <li
                 key={index}
                 className={classname}
+                
                 onClick={() => onSelectSuggestion(index)}
               >
                 {suggestion}

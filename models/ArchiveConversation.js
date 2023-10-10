@@ -9,20 +9,18 @@ const ArchiveConversationSchema = new Schema(
       ref: "conversationCategory",
       required: true,
     },
-    to: { type: Schema.Types.ObjectId, ref: "User", required: true }, // kinu kiti aa
-    from: { type: Schema.Types.ObjectId, ref: "User", required: true }, // kine kiti aa
+    to: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    from: { type: Schema.Types.ObjectId, ref: "User", required: true },
   },
   {
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }
 );
-// the schema is useless so far
-// we need to create a model using it
 const ArchiveConversation = mongoose.model(
   "archive",
   ArchiveConversationSchema,
   "archive"
 );
 
-// make this available to our users in our Node applications
+//  make this available to our users in our Node applications
 module.exports = ArchiveConversation;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Tag/components/Sidebar";
-import Advertisement from "../advertisement";
+// import Advertisement from "../advertisement";
 import { useAtom } from "jotai";
 import {
   addedPost,
@@ -62,11 +62,7 @@ const Home = () => {
       setIsFirstStartindex(true);
     }
   }, [postType]);
-  // useEffect(() => {
-  //   if (Posts.length < 1) {
-  //     getPosts.refetch();
-  //   }
-  // }, []);
+
   useEffect(() => {
     if (userAddedPost?.length && Posts?.length) {
       setPosts([...userAddedPost, ...Posts]);
@@ -111,11 +107,6 @@ const Home = () => {
       setIsFirstStartindex(false);
     }
   }, [getPosts?.data, startIndex, currentPage]);
-  // useEffect(() => {
-  //   if (startIndex <= 0 && postCounts) {
-  //     setStartIndex(postCounts);
-  //   }
-  // }, [postType, Posts, postCounts]);
 
   return (
     <div className="h-full">
@@ -268,13 +259,13 @@ const Home = () => {
               </div>
             )}
           </div>
-          <div className="mt-4 hidden lg:block">
+          {/* <div className="mt-4 hidden lg:block">
             <Advertisement />
-          </div>
+          </div> */}
         </div>
-        <div className="mt-8  hidden md:block lg:hidden">
+        {/* <div className="mt-8  hidden md:block lg:hidden">
           <Advertisement />
-        </div>
+        </div> */}
       </div>
     </div>
   );

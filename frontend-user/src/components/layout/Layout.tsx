@@ -9,7 +9,7 @@ import { currentUser as getCurrentUser } from "@/services/user/index";
 import BottomFooter from "./BottomFooter";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // Put Header or Footer Here
+
   const router = useRouter();
   const [currentUser, setCurrentUser] = useAtom(loggedInUser);
   React.useEffect(() => {
@@ -26,11 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Header />
       <div className="">{children}</div>
       <LoginModal />
-      {/* {currentUser?.data?._id && (
-        <div className="h-10 lg:h-0">
-          <BottomFooter />
-        </div>
-      )} */}
+
     </div>
   );
 }

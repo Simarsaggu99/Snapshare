@@ -18,7 +18,7 @@ const Popover: FC<popoverProps> = ({
   const userCardRef = useRef<any>(null);
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
-      // If the menu is open and the clicked target is not within the menu,
+     
       if (
         isVisible &&
         userCardRef.current &&
@@ -49,6 +49,7 @@ const Popover: FC<popoverProps> = ({
         </div>
       ) : null}
     </div>
+    
   );
 };
 

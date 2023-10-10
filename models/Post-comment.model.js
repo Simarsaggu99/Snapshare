@@ -1,7 +1,7 @@
 const dayjs = require("dayjs");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// create a schema
+
 const PostCommentSchema = new Schema(
   {
     post_id: { type: Schema.Types.ObjectId, ref: "Post", required: true },
@@ -13,7 +13,7 @@ const PostCommentSchema = new Schema(
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }
 );
-// the schema is useless so far
+
 // we need to create a model using it
 const PostComment = mongoose.model(
   "PostComment",

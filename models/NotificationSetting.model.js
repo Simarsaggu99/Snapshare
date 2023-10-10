@@ -27,4 +27,5 @@ const NotificationSettings = model(
   NotificationSetting,
   "notificationSetting"
 );
+// make this available to our  users in our Node applications
 module.exports = NotificationSettings;

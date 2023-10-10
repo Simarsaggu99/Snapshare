@@ -21,5 +21,5 @@ const CountryCode = mongoose.model(
   "Countries"
 );
 
-// make this available to our orders in our Node applications
+// make  this available to our orders in our Node applications
 module.exports = CountryCode;

@@ -808,9 +808,9 @@ const Profile = () => {
                   )}
                 </div>
               </div>
-              <div className=" static hidden h-full text-center lg:sticky lg:top-16 lg:ml-2 lg:mt-6 lg:block  lg:w-[29%]">
+              {/* <div className=" static hidden h-full text-center lg:sticky lg:top-16 lg:ml-2 lg:mt-6 lg:block  lg:w-[29%]">
                 <Advertisement isProfileOpen={true} />
-              </div>
+              </div> */}
             </div>
           )}
       </div>

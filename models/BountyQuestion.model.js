@@ -16,12 +16,12 @@ const BountyQuestionSchema = new Schema(
     correctAnswer: { type: String },
     option: [{ type: String }],
     media: [
-        {
-          url: { type: String },
-          type: { type: String, default: "image" }
-        },
-      ],
-},
+      {
+        url: { type: String },
+        type: { type: String, default: "image" }
+      },
+    ],
+  },
   {
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }

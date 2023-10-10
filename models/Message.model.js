@@ -37,7 +37,7 @@ const MessageSchema = new Schema(
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }
 );
-// the schema is useless so far
+// the schema is  useless so far
 // we need to create a model using it
 const Message = mongoose.model("Message", MessageSchema, "message");
 

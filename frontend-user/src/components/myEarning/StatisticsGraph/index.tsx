@@ -24,11 +24,9 @@ export function StatisticsGraph({ getEarningStatics, statisticsTabs }: any) {
     },
     vAxis: {
       title: "No.s",
-      // ticks: optionValues?.map((item) => {
-      //   return { v: item, f: `${item}` };
-      // }),
+      
     },
-    // tooltip: { isHtml: true, trigger: "visible" },
+    
 
     series: {
       curveType: "function",
@@ -59,27 +57,10 @@ export function StatisticsGraph({ getEarningStatics, statisticsTabs }: any) {
           item?.date,
           item?.likes,
           item?.views,
-          // item?.shares,
+          
           item?.follows,
           item?.totalInvite,
-          // `
-          // <div class='text-center border-b px-1'>${item?.date}</div>
-          // <div class="flex gap-2 px-3 pt-1">
-          // <p class="mt-1 h-4 w-4 rounded bg-[#157EE0]"> </p>
-          // <p>Likes${item?.likes}</p>
-          // </div>
-          // <div class="flex gap-2 px-3">
-          // <p class="mt-1 h-4 w-4 rounded bg-[#04B100]"> </p>
-          // <p>Share${item?.shares}</p>
-          // </div>
-          // <div class="flex gap-2 px-3">
-          // <p class="mt-1 h-4 w-4 rounded bg-[#ff9900]"> </p>
-          // <p>Followers${item?.follows}</p>
-          // </div>
-          // <div class="flex gap-2 px-3 pb-2">
-          // <p class="mt-1 h-4 w-4 rounded bg-[#E80000]"> </p>
-          // <p>View${item?.views}</p>
-          // </div>`,
+          
         ];
       });
     } else {
@@ -120,7 +101,7 @@ export function StatisticsGraph({ getEarningStatics, statisticsTabs }: any) {
                   "View",
                   "follows",
                   "invite",
-                  // { role: "tooltip", type: "string", p: { html: true } },
+                 
                 ],
                 ...graphData,
               ]}

@@ -1,4 +1,4 @@
-import Advertisement from "@/components/advertisement";
+// import Advertisement from "@/components/advertisement";
 import Button from "@/components/buttons/Button";
 import { BackIcon } from "@/components/Icons";
 import Spin from "@/components/UIComponents/Spin";
@@ -294,9 +294,9 @@ const MyCollectiom = () => {
             )}
           </div>
         </div>
-        <div className="hidden bg-green-400 lg:block">
+        {/* <div className="hidden bg-green-400 lg:block">
           <Advertisement />
-        </div>
+        </div> */}
       </div>
     </div>
   );

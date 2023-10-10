@@ -12,12 +12,11 @@ const EarningThresholdSchema = new Schema(
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
   }
 );
-// we need to create a model using it
 const EarningThreshold = mongoose.model(
   "EarningThreshold",
   EarningThresholdSchema,
   "earningThreshold"
 );
 
-// make this available to our users in our Node applications
+//  make this available to our users in our Node applications
 module.exports = EarningThreshold;
